@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="simple.jiren:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="jiren.war">
+      <element id="artifact" artifact-name="simple.jiren:war exploded" />
+    </root>
+  </artifact>
+</component>

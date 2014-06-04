@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="simple.jiren:war exploded">
+    <output-path>$PROJECT_DIR$/target/jiren</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="simple.jiren/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="simple.jiren" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
