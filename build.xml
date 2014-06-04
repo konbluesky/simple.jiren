@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ams" default="remote">
+
+    <property name="local.war.path" value="/Users/konbluesky/work/simple.jiren/target/jiren.war"/>
+    <property name="remote.address" value="59.188.75.108"/>
+    <property name="remote.war.address" value="/root/jiren.war"/>
+    <property name="remote.username" value="root"/>
+    <property name="remote.password" value="gongwei911"/>
+
+    <target name="remote">
+        <echo message="The file of war is uploading beginning "/>
+        <exec command="mvn package"/>
+        <scp
+                file="${local.war.path}"
+                password="${remote.password}"
+                todir="${remote.username}@${remote.address}:${remote.war.address}"
+                trust="true"
+                />
+        <echo message="finished"/>
+    </target>
+
+</project>

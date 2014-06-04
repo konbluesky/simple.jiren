@@ -14,8 +14,43 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>com.jfinal</groupId>
+          <artifactId>jfinal</artifactId>
+          <version>1.8</version>
+      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>com.jfinal</groupId>-->
+          <!--<artifactId>jfinal-ext</artifactId>-->
+          <!--<version>3.1.0</version>-->
+      <!--</dependency>-->
+      <dependency>
+          <groupId>freemarker</groupId>
+          <artifactId>freemarker</artifactId>
+          <version>2.3.9</version>
+          <type>pom</type>
+      </dependency>
   </dependencies>
   <build>
     <finalName>jiren</finalName>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>2.1.1</version>
+              <configuration>
+                  <webResources>
+                      <resource>
+                          <!-- this is relative to the pom.xml directory -->
+                          <directory>src/main/webapp</directory>
+                      </resource>
+                  </webResources>
+                  <warName>jiren</warName>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
+
+
+
 </project>
