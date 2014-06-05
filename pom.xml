@@ -36,13 +36,28 @@
       </dependency>
   </dependencies>
   <build>
-    <finalName>jiren</finalName>
+      <finalName>jiren</finalName>
+      <sourceDirectory>src/main/java</sourceDirectory>
+      <outputDirectory>target/classes</outputDirectory>
+      <!--<resources>-->
+          <!--&lt;!&ndash;打包源代码&ndash;&gt;-->
+          <!--<resource>-->
+              <!--<directory>src/main/resources</directory>-->
+              <!--<excludes>-->
+                  <!--<exclude>**/*.java</exclude>-->
+              <!--</excludes>-->
+          <!--</resource>-->
+      <!--</resources>-->
       <plugins>
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-war-plugin</artifactId>
               <version>2.1.1</version>
               <configuration>
+                  <!--不打包pom文件-->
+                  <archive>
+                      <addMavenDescriptor>false</addMavenDescriptor>
+                  </archive>
                   <webResources>
                       <resource>
                           <!-- this is relative to the pom.xml directory -->
