@@ -1,27 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<#include "/WEB-INF/template/common/macro/base.ftl"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="css/base.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="top">
-    <div class="tmp-content">1</div>
+    <@topmenu/>
 </div>
-<div class="head"></div>
-<div class="nav">
-     <div class="nav-menu navbar">
-         <#include "/WEB-INF/template/common/macro/base.ftl"/>
-         <@navbar></@navbar>
-     </div>
+<div class="head">
+    2
+</div>
+<div class="navigators">
+     <@navbar/>
 </div>
 <div class="main">
-    <div>
-
+    <div class="player-and-quick">
+        <div class="pull-left">
+            <@topic/>
+            <@topic/>
+        </div>
+        <div class="pull-right">
+            <@imageplayer/>
+        </div>
     </div>
 </div>
-<div class="footer"></div>
+<div class="footer">
+    <@footer/>
+</div>
 </body>
 </html>
