@@ -39,6 +39,53 @@ a {
     position: relative;
     overflow: hidden;
 }
+
+.nav-menu ul {
+    width: 1000px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    background: #417999 url(../cngold_nav.png) 0 0 repeat-x;
+    overflow: hidden;
+}
+.nav-menu li {
+    float: left;
+    width: 87px;
+    text-align: center;
+    line-height: 40px;
+    font-family: "Microsoft Yahei";
+    background: url(../img/cngold_nav.png) right -80px no-repeat;
+    overflow: hidden;
+}
+.nav-menu li a {
+    font-size: 14px;
+}
+.nav-menu li a {
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+}
+.nav-menu li a:hover {
+    background: #ba3022;
+    background: -moz-linear-gradient(top,#C34232,#AD261A);
+    background: -webkit-gradient(linear,0 0,0 100%,from(#C34232),to(#AD261A));
+    color: #fff;
+    text-decoration: none;
+}
+.nav-menu li.kx{
+    width: 125px;
+    text-align: left;
+}
+.nav-menu li.kx a cite {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    background: url(http://res.cngoldres.com/web/index/img/index_img_kx.gif) no-repeat;
+    margin: 12px 6px 0 12px;
+    overflow: hidden;
+}
 .main{
     width: 1000px;
     margin: 0px auto;
@@ -64,6 +111,11 @@ a {
     width: 260px;
     float: right;
     overflow: hidden;
+}
+.social li {
+    float: right;
+    width: 80px;
+    margin-left: 50px;
 }
 .footer .copyright{
     width: 1000px;
