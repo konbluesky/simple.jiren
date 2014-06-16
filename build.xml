@@ -16,6 +16,10 @@
                 todir="${remote.username}@${remote.address}:${remote.war.address}"
                 trust="true"
                 />
+        <sshexec host="${remote.address}"
+                 username="${remote.username}"
+                 password="${remote.password}"
+                 command="sh script/tomcat_restart.sh;" trust="true"/>
         <echo message="finished"/>
     </target>
 

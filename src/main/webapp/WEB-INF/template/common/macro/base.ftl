@@ -207,14 +207,15 @@ currActive 当前活动tab
 </#macro>
 
 
-<#macro columntab>
+<#macro columntab tabs=['aaa','bbb','ccc'] tab_index=0 >
 <div class="columnTab">
     <div class="hd">
         <ul>
-            <li class=""><h3><a href="http://www.cngold.org/matter/jintiao/" target="_blank">金条</a></h3></li>
-            <li class=""><h3><a href="http://www.cngold.org/matter/jinbi/" target="_blank">金币</a></h3></li>
-            <li class=""><h3><a href="http://ag.cngold.org/yinbi/" target="_blank">银币</a></h3></li>
-            <li class="on"><h3><a href="http://www.cngold.org/matter/qianzujin/" target="_blank">足金</a></h3></li>
+        <#list tabs as t>
+            <li <#if tab_index=t_index>class="on"</#if>>
+                <h3><a href="http://www.cngold.org/matter/jintiao/" target="_blank">${t}</a></h3>
+            </li>
+        </#list>
         </ul>
     </div>
     <div class="bd">
@@ -454,7 +455,7 @@ currActive 当前活动tab
     </p>
 
     <p>版权所有 © 2008-2014 <a href="javascript:;" target="_blank" title="百度广告管家"><img
-            src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a><br>本站信息仅供投资者参考，不做为投资建议！
+            src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a><br>杭州吉人投资管理有限公司。本站信息仅供投资者参考，不做为投资建议！
     </p>
 </div>
 
