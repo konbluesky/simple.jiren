@@ -6,16 +6,16 @@ currActive 当前活动tab
 <div id="nav">
     <div class="nav-menu bold" style="position: static; top: 101px;">
         <ul>
-            <li><a href="javascript:;" target="_blank" class="current">首页</a></li>
-            <li><a href="javascript:;" target="_blank">金银资讯</a></li>
-            <li class="kx"><a href="javascript:;" target="_blank"><cite></cite>24小时快讯</a></li>
-            <li><a href="javascript:;" target="_blank">金银分析</a></li>
-            <li><a href="javascript:;" target="_blank">投资学院</a></li>
-            <li class="f3"><a href="javascript:;" target="_blank">AA银</a></li>
-            <li class="f3"><a href="javascript:;" target="_blank">BB银</a></li>
-            <li><a href="javascript:;" target="_blank">财经日历</a></li>
-            <li><a href="javascript:;" target="_blank">开户指南</a></li>
-            <li class="f3 last"><a href="javascript:;" target="_blank">投诉反馈</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank" class="current">首页</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">金银资讯</a></li>
+            <li class="kx"><a href="${CONTEXT_PATH}/zxdata" target="_blank"><cite></cite>24小时快讯</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">金银分析</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">投资学院</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">新华银</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">中玺银</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">财经日历</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">开户指南</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">投诉反馈</a></li>
         </ul>
     </div>
     <div class="quote-nav">
@@ -454,9 +454,42 @@ currActive 当前活动tab
             href="javascript:;" target="_blank">热门搜索</a>
     </p>
 
-    <p>版权所有 © 2008-2014 <a href="javascript:;" target="_blank" title="百度广告管家"><img
-            src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a><br>杭州吉人投资管理有限公司。本站信息仅供投资者参考，不做为投资建议！
+    <p>版权所有 © 2013-2014 <a href="javascript:;" target="_blank" title="百度广告管家"><img
+            src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a>
+        <br>杭州吉人投资管理有限公司。<br>本站信息仅供投资者参考，不做为投资建议！
     </p>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd1fb36d0cb70b3d682b2708c9995662b' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 </div>
 
+</#macro>
+
+<#macro title page>
+<title>${page.title}</title>
+<meta name="description" content="${page.description}">
+<meta name="keywords" content="${page.keywords}">
+<meta name="author" content="${page.author}">
+</#macro>
+
+<#macro basehead>
+<link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/base.css" />
+<link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap-theme.css" />
+<script type="text/javascript" src="${CONTEXT_PATH}/js/jquery.js"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/js/bootstrap.min.js"></script>
+</#macro>
+
+<#macro breadcrumb>
+<ul class="breadcrumb" style="margin: 0 0 0 0px;">
+    <li><a href="#">首页</a> <span class="divider">/</span></li>
+    <li><a href="#">新闻</a> <span class="divider">/</span></li>
+    <li class="active">你问啊啊</li>
+</ul>
+</#macro>
+
+<#macro share_bd>
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </#macro>

@@ -54,7 +54,7 @@ a {
     text-align: center;
     line-height: 40px;
     font-family: "Microsoft Yahei";
-    background: url(../img/cngold_nav.png) right -80px no-repeat;
+    background: url(../img/peopleim_nav.png) right -80px no-repeat;
     overflow: hidden;
 }
 .nav-menu li a {
@@ -108,6 +108,7 @@ a {
     border-right: 1px solid #F0F0F0;
     overflow: hidden;
 }
+/*border*1 + margin*10*/
 .main-right {
     width: 689px;
     float: right;
@@ -189,7 +190,7 @@ a {
 .topmenu-pop .tel {
     margin-left: 15px;
     display: block;
-    background: url(../img/cngold_sprite.png) -540px -56px no-repeat;
+    background: url(../img/peopleim_sprite.png) -540px -56px no-repeat;
     padding-left: 20px;
 }
 
@@ -219,7 +220,7 @@ a {
 .topic .list24 li {
     height: 24px;
     line-height: 24px;
-    background: url(../img/cngold_sprite.png) -657px -77px no-repeat;
+    background: url(../img/peopleim_sprite.png) -657px -77px no-repeat;
     text-indent: 13px;
     overflow: hidden;
 }
@@ -267,7 +268,7 @@ a {
 .columnTab .list30 li {
     height: 30px;
     line-height: 30px;
-    background: url(../img/cngold_sprite.png) -650px -74px no-repeat;
+    background: url(../img/peopleim_sprite.png) -650px -74px no-repeat;
     text-indent: 20px;
     overflow: hidden;
 }
@@ -276,10 +277,77 @@ a {
     float: left;
 }
 
+.d-main{
+    width: 998px;
+    border: 1px solid #F0F0F0;
+    border-top: 2px solid #487F9E;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.d-main-left{
+    float: left;
+    margin-right: 10px;
+    border-right: 1px solid #F0F0F0;
+    overflow: hidden;
+    width: 650px;
+    padding: 0 27px 0 10px;
+}
+/*border*1 + margin*10*/
+.d-main-right {
+    width: 300px;
+    float: right;
+    overflow: hidden;
+}
+.d-article{
+    width: 100%;
+}
+.d-article h1{
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Microsoft Yahei";
+    font-weight: normal;
+}
+.d-article-info{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px dotted #E8EAED;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+}
+.d-article-info span{
+    float: left;
+    margin-right: 20px;
+}
+.d-article-summary{
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 20px;
+    background: #F5F5F5;
+    line-height: 24px;
+    color: #999;
+}
+.d-article-content{
+    width: 100%;
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    overflow: hidden;
+}
+.d-article-content p {
+    text-indent: 2em;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.d-article-share{
+    width: 100%;
+    margin: 20px 0;
+}
 
 /*通用样式*/
-
-
 .bold{
     font-weight: bold;
 }

@@ -1,4 +1,5 @@
 <#include "/WEB-INF/template/common/macro/base.ftl"/>
+<#macro indexlayout>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,51 +8,52 @@
 </head>
 <body>
 <div class="top">
-    <@topmenu/>
+<@topmenu/>
 </div>
 <div class="head">
     <div>网站logo+ 宣传banner</div>
 </div>
 <div class="navigators">
-     <@navbar/>
+<@navbar/>
 </div>
 <div class="main">
     <div class="section">
         <div class="main-left">
-            <@topic/>
+        <@topic/>
         </div>
         <div class="main-right">
-            <@columntab tab_index=1/>
+        <@columntab tab_index=1/>
         </div>
     </div>
     <div class="section">
         <div class="main-left">
-            <@topic/>
+        <@topic/>
         </div>
         <div class="main-right">
-            <@columntab tab_index=2/>
+        <@columntab tab_index=2/>
         </div>
     </div>
     <div class="section">
         <div class="main-left">
-            <@topic/>
+        <@topic/>
         </div>
         <div class="main-right">
-            <@columntab/>
+        <@columntab/>
         </div>
     </div>
     <div class="section">
         <div class="main-left">
-            <@topic/>
+        <@topic/>
         </div>
         <div class="main-right">
-            <@columntab/>
+        <@columntab/>
         </div>
     </div>
 
 </div>
 <div class="footer">
-    <@footer/>
+<@footer/>
 </div>
 </body>
 </html>
+</#macro>
