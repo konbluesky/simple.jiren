@@ -7,6 +7,6 @@ import com.jiren.base.control.AbstractSiteControl;
  */
 public class IndexControl extends AbstractSiteControl {
     public void index(){
-
+        renderFreeMarker("index.html");
     }
 }

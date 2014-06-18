@@ -7,6 +7,12 @@
     <property name="remote.username" value="root"/>
     <property name="remote.password" value="gongwei911"/>
 
+
+    <property name="remote2.address" value="210.209.73.47"/>
+    <property name="remote2.war.address" value="/opt/work/wwwroot"/>
+    <property name="remote2.username" value="root"/>
+    <property name="remote2.password" value="gongwei911"/>
+
     <target name="remote">
         <echo message="The file of war is uploading beginning "/>
         <exec command="mvn package"/>
@@ -21,6 +27,31 @@
                  password="${remote.password}"
                  command="sh script/tomcat_restart.sh;" trust="true"/>
         <echo message="finished"/>
+    </target>
+<!--部署生产环境-->
+    <target name="remote-real">
+        <exec command="mvn package"/>
+            <scp
+                password="${remote2.password}"
+                todir="${remote2.username}@${remote2.address}:${remote2.war.address}"
+                trust="true"
+                >
+            <fileset dir="target/jiren">
+                <exclude name="WEB-INF/a_little_config.txt"/>
+            </fileset>
+        </scp>
+    </target>
+    <target name="remote-real-quick">
+        <exec command="mvn package"/>
+        <scp
+                password="${remote2.password}"
+                todir="${remote2.username}@${remote2.address}:${remote2.war.address}"
+                trust="true"
+                >
+            <fileset dir="target/jiren">
+                <exclude name="WEB-INF/a_little_config.txt"/>
+            </fileset>
+        </scp>
     </target>
 
 </project>
