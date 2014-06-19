@@ -239,7 +239,7 @@ a {
 }
 .columnTab .hd ul {
     float: left;
-    width: 648px;
+    width: 688px;
     border-left: 1px solid #DDDDDD;
     background: #FAFAFA;
     position: absolute;
@@ -247,7 +247,7 @@ a {
 }
 .columnTab .hd li {
     float: left;
-    width: 161px;
+    width: 171px;
     height: 27px;
     line-height: 27px;
     border-right: 1px solid #DDDDDD;

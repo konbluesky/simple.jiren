@@ -58,6 +58,10 @@
             <#--<span class="label">黄金</span>-->
             <#--<span class="label">黄金</span>-->
         <#--</div>-->
+        <div>
+            <span class="label label-important">免责声明</span>
+            人投网发布此信息目的在于传播更多信息，与本网站立场无关。人投网不保证该信息（包括但不限于文字、数据及图表）全部或者部分内容的准确性、真实性、完整性、有效性、及时性、原创性等。相关信息并未经过本网站证实，不对您构成任何投资建议，据此操作，风险自担。
+        </div>
         <div class="d-article-share">
             <@share_bd/>
         </div>

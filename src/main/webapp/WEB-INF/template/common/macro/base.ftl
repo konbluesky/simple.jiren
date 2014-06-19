@@ -207,7 +207,7 @@ currActive 当前活动tab
 </#macro>
 
 
-<#macro columntab tabs=['aaa','bbb','ccc'] tab_index=0 >
+<#macro columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0 >
 <div class="columnTab">
     <div class="hd">
         <ul>

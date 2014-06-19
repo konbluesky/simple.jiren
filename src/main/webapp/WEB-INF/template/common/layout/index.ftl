@@ -22,7 +22,7 @@
         <@topic/>
         </div>
         <div class="main-right">
-        <@columntab tab_index=1/>
+            <@columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0/>
         </div>
     </div>
     <div class="section">
@@ -30,7 +30,7 @@
         <@topic/>
         </div>
         <div class="main-right">
-        <@columntab tab_index=2/>
+            <@columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0/>
         </div>
     </div>
     <div class="section">
@@ -38,7 +38,7 @@
         <@topic/>
         </div>
         <div class="main-right">
-        <@columntab/>
+            <@columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0/>
         </div>
     </div>
     <div class="section">
@@ -46,7 +46,7 @@
         <@topic/>
         </div>
         <div class="main-right">
-        <@columntab/>
+            <@columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0/>
         </div>
     </div>
 
