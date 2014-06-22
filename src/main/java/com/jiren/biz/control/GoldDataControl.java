@@ -1,12 +1,14 @@
 package com.jiren.biz.control;
 
-import com.jfinal.core.Controller;
+
+import com.jiren.base.control.AbstractSiteControl;
+import com.jiren.base.kit.PathBizKit;
 
 /**
  * Created by konbluesky on 14-6-17.
  */
-public class GoldDataControl extends Controller {
+public class GoldDataControl extends AbstractSiteControl {
     public void index(){
-        renderFreeMarker("/WEB-INF/template/page/gloddata.html");
+        renderFreeMarker(PathBizKit.getPagePath()+"/news/gloddata.ftl");
     }
 }

@@ -207,205 +207,41 @@ currActive 当前活动tab
 </#macro>
 
 
-<#macro columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0 >
+<#macro columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0 listgroup={}>
+<script type="text/javascript">
+    (function(){
+        $(document).on("mousemove",".columnTab .hd li",function(event){
+            $(this).addClass("on").siblings().removeClass("on");
+            var i=$(this).index();
+            var blist=$(".columnTab .bd div").hide().eq(i).show();
+        });
+    })();
+</script>
 <div class="columnTab">
     <div class="hd">
         <ul>
-        <#list tabs as t>
-            <li <#if tab_index=t_index>class="on"</#if>>
-                <h3><a href="http://www.cngold.org/matter/jintiao/" target="_blank">${t}</a></h3>
+        <#list tabs as tname>
+            <li <#if tab_index=tname_index>class="on"</#if>>
+                <h3><a href="http://www.cngold.org/matter/jintiao/" target="_blank">${tname}</a></h3>
             </li>
         </#list>
         </ul>
     </div>
     <div class="bd">
-        <div class="column-box" style="display: none;">
-            <ul class="list30 row2">
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585624.html" target="_blank" title="房地产商办金条抽奖活动回馈新老业主">房地产商办金条抽奖活动回馈新老业主</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585623.html" target="_blank" title="中国大妈疯抢金条后 金价一路狂泻解套无望">中国大妈疯抢金条后 金价一路狂泻解套无望</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585246.html" target="_blank" title="今日中国黄金投资金条价格(2014年6月6日)">今日中国黄金投资金条价格(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585243.html" target="_blank" title="生肖金条价格 马年贺岁金条行情(6月6日)">生肖金条价格 马年贺岁金条行情(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585236.html" target="_blank" title="银行金条价格今天多少钱一克(2014年6月6日)">银行金条价格今天多少钱一克(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585230.html" target="_blank" title="中金黄金投资金条 世博金条价格行情(6月6日)">中金黄金投资金条 世博金条价格行情(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585221.html" target="_blank" title="今日一根金条价值多少钱(2014年6月6日)">今日一根金条价值多少钱(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585207.html" target="_blank" title="中金黄金投资金条 马年金条价格走势(6月6日)">中金黄金投资金条 马年金条价格走势(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583496.html" target="_blank" title="中国黄金今日金条价格走势(2014年6月5日)">中国黄金今日金条价格走势(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583494.html" target="_blank" title="生肖金条价格 贺岁金条行情(2014年6月5日)">生肖金条价格 贺岁金条行情(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583493.html" target="_blank" title="今日银行金条价格多少钱一克(2014年6月5日)">今日银行金条价格多少钱一克(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583490.html" target="_blank" title="中金黄金投资金条 世博金条价格(2014年6月5日)">中金黄金投资金条 世博金条价格(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583488.html" target="_blank" title="金条价格查询 金条多少钱一克(2014年6月5日)">金条价格查询 金条多少钱一克(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583486.html" target="_blank" title="马年金条价格是多少(2014年6月5日)">马年金条价格是多少(2014年6月5日)</a>
-                </li>
-            </ul>
-        </div>
-        <div class="column-box" style="display: none;">
-            <ul class="list30 row2">
-
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585334.html" target="_blank" title="2014年熊猫金币价格是多少(6月6日)">2014年熊猫金币价格是多少(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585328.html" target="_blank" title="中国金币收藏网金币价格走势(6月6日)">中国金币收藏网金币价格走势(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585313.html" target="_blank" title="中国金币网最新彩金币价格(2014年6月6日)">中国金币网最新彩金币价格(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585293.html" target="_blank" title="中国甲午马年金币价格行情(2014年6月6日)">中国甲午马年金币价格行情(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585239.html" target="_blank" title="美国夫妇后院挖出金币 已拍卖百万美元">美国夫妇后院挖出金币 已拍卖百万美元</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583516.html" target="_blank" title="今日熊猫金币价格走势(2014年6月5日)">今日熊猫金币价格走势(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583515.html" target="_blank" title="中国金币收藏网 金币价格行情(6月5日)">中国金币收藏网 金币价格行情(6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583513.html" target="_blank" title="中国金币网 最新彩金币行情(2014年6月5日)">中国金币网 最新彩金币行情(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583512.html" target="_blank" title="中国甲午(马)年金币价格行情(6月5日)">中国甲午(马)年金币价格行情(6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583062.html" target="_blank" title="马年限量版10公斤金币 价值高达千万元">马年限量版10公斤金币 价值高达千万元</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580422.html" target="_blank" title="2014年熊猫金币价格是多少(6月4日)">2014年熊猫金币价格是多少(6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580421.html" target="_blank" title="中国金币收藏网金币价格走势(6月4日)">中国金币收藏网金币价格走势(6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580417.html" target="_blank" title="中国金币网最新彩金币价格(2014年6月4日)">中国金币网最新彩金币价格(2014年6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580413.html" target="_blank" title="中国甲午马年金币价格行情(6月4日)">中国甲午马年金币价格行情(6月4日)</a>
-                </li>
-            </ul>
-        </div>
-        <div class="column-box" style="display: none;">
-            <ul class="list30 row2">
-
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-06/c2585154.html" target="_blank" title="今日大清银币宣统三年价格最新查询（6月6日）">今日大清银币宣统三年价格最新查询（6月6日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-06/c2585151.html" target="_blank" title="6月6日今日大清银币价格最新查询">6月6日今日大清银币价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-06/c2585145.html" target="_blank" title="6月6日今日熊猫银币价格最新查询">6月6日今日熊猫银币价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-06/c2585142.html" target="_blank" title="历年1盎司熊猫银币价格最新查询（6月6日）">历年1盎司熊猫银币价格最新查询（6月6日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-05/c2583058.html" target="_blank" title="6月5日今日大清银币价格最新查询">6月5日今日大清银币价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-05/c2583056.html" target="_blank" title="今日大清银币宣统三年价格最新查询（6月5日）">今日大清银币宣统三年价格最新查询（6月5日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-05/c2583052.html" target="_blank" title="历年1盎司熊猫银币最新价格查询（6月5日）">历年1盎司熊猫银币最新价格查询（6月5日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-05/c2583048.html" target="_blank" title="6月5日今日熊猫银币价格最新查询">6月5日今日熊猫银币价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-04/c2580663.html" target="_blank" title="今日大清银币宣统三年价格最新查询（6月4日）">今日大清银币宣统三年价格最新查询（6月4日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-04/c2580649.html" target="_blank" title="今日大清银币价格最新查询（6月4日）">今日大清银币价格最新查询（6月4日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-04/c2580634.html" target="_blank" title="6月4日今日熊猫银币价格最新查询">6月4日今日熊猫银币价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-04/c2580618.html" target="_blank" title="历年1盎司熊猫银币最新价格查询（6月4日）">历年1盎司熊猫银币最新价格查询（6月4日）</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-03/c2578472.html" target="_blank" title="6月3日今日大清银币宣统三年价格最新查询">6月3日今日大清银币宣统三年价格最新查询</a>
-                </li>
-                <li>
-                    <a href="http://ag.cngold.org/c/2014-06-03/c2578458.html" target="_blank" title="今日大清银币价格最新查询（6月3日）">今日大清银币价格最新查询（6月3日）</a>
-                </li>
-            </ul>
-        </div>
-        <div class="column-box" style="display: block;">
-            <ul class="list30 row2">
-
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585188.html" target="_blank" title="千足金价格趋势 今日足金价格行情(6月6日)">千足金价格趋势 今日足金价格行情(6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585185.html" target="_blank" title="千足金今日回收价格查询(2014年6月6日)">千足金今日回收价格查询(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585182.html" target="_blank" title="今天千足金价格多少钱一克(2014年6月6日)">今天千足金价格多少钱一克(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-06/c2585178.html" target="_blank" title="今日千足金价格最新走势(2014年6月6日)">今日千足金价格最新走势(2014年6月6日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583483.html" target="_blank" title="今日千足金价格 足金价格走势(6月5日)">今日千足金价格 足金价格走势(6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583482.html" target="_blank" title="千足金今日回收价格查询(2014年6月5日)">千足金今日回收价格查询(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583478.html" target="_blank" title="千足金价格今天多少一克(2014年6月5日)">千足金价格今天多少一克(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-05/c2583477.html" target="_blank" title="今日千足金价格最新行情(2014年6月5日)">今日千足金价格最新行情(2014年6月5日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580251.html" target="_blank" title="今日千足金价格 足金价格查询(6月4日)">今日千足金价格 足金价格查询(6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580249.html" target="_blank" title="千足金今日回收价格查询(2014年6月4日)">千足金今日回收价格查询(2014年6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580242.html" target="_blank" title="千足金价格今天多少一克(2014年6月4日)">千足金价格今天多少一克(2014年6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-04/c2580239.html" target="_blank" title="今日千足金万足金价格行情(2014年6月4日)">今日千足金万足金价格行情(2014年6月4日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-03/c2577945.html" target="_blank" title="今日千足金价格 足金价格查询(6月3日)">今日千足金价格 足金价格查询(6月3日)</a>
-                </li>
-                <li>
-                    <a href="http://www.cngold.org/c/2014-06-03/c2577944.html" target="_blank" title="千足金今日回收价格查询(2014年6月3日)">千足金今日回收价格查询(2014年6月3日)</a>
-                </li>
-            </ul>
-        </div>
+    <#if listgroup?exists>
+        <#assign map = listgroup>
+        <#list map.keySet()  as k>
+            <div class="column-box" style="<#if k == tab_index> display: block;<#else> display: none; </#if>">
+                <ul class="list30 row2">
+                    <#list listgroup.get(k) as listitem>
+                        <li>
+                            <@newsUrl listitem/>
+                        </li>
+                    </#list>
+                </ul>
+            </div>
+        </#list>
+    </#if>
     </div>
 </div>
 </#macro>
@@ -462,6 +298,8 @@ currActive 当前活动tab
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd1fb36d0cb70b3d682b2708c9995662b' type='text/javascript'%3E%3C/script%3E"));
     </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000500258'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1000500258%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
 </div>
 
 </#macro>
@@ -476,7 +314,6 @@ currActive 当前活动tab
 <#macro basehead>
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/base.css" />
-<link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap-theme.css" />
 <script type="text/javascript" src="${CONTEXT_PATH}/js/jquery.js"></script>
 <script type="text/javascript" src="${CONTEXT_PATH}/js/bootstrap.min.js"></script>
 </#macro>
@@ -492,4 +329,15 @@ currActive 当前活动tab
 <#macro share_bd>
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</#macro>
+
+
+<#--基础连接生成-->
+<#macro basehref url="" atext="连接文字" target="_blank" title="" class="">
+    <a href="${CONTEXT_PATH}/${url}" target="${target}" class="${class}" title="${title}">${atext}</a>
+</#macro>
+<#macro newsUrl news>
+    <@basehref url="n/"+news.pdate+"/"+news.id+".html"
+                title=news.newstitle
+                atext=news.newstitle />
 </#macro>

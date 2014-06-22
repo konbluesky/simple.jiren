@@ -1,4 +1,4 @@
-<#include "/WEB-INF/template/common/layout/detail.ftl"/>
+<#include "/WEB-INF/template/common/layout/l_detail.ftl"/>
 <@detail>
 <div class="d-main-left">
     <div style="margin-top:10px;width: 670px;height: 3000px;">
