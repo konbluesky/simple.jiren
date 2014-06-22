@@ -11,7 +11,7 @@
     <@topmenu/>
 </div>
 <div class="head">
-    <div>网站logo+ 宣传banner</div>
+    <@head/>
 </div>
 <div class="navigators">
     <@navbar/>
@@ -63,4 +63,34 @@
             <@share_bd/>
         </div>
     </div>
+</#macro>
+
+<#macro detail_right>
+<div class="d-main-right">
+    <div class="comm t-line" id="docreport">
+        <div class="vip-jp"><h3><span><a href="javascript:;" title="最新解盘"
+                                         target="_blank">最新解盘&gt;&gt;</a></span><a href="javascript:;"
+                                                                                   title="VIP实盘在线解盘"
+                                                                                   target="_blank">VIP实盘在线解盘</a>
+        </h3>
+
+            <div>
+                <ul>
+                    <li><span>2014-06-20 23:38:10---- </span>
+                        建议大家不要看行情，看条件即可，只有达到和不达到之分，没有点位之分，我们抓的是趋势，不是点位。今晚行情直播到此结束，感谢大家。
+                    </li>
+                    <li><span>2014-06-20 22:54:58---- </span>[策略]现货金银继续延续多头格局，黄金1278 白银19.92多单继续持有 移动成本线上升到1306和20.6
+                        继续扩大利润 晚间轻仓介入的朋友 建议把目前的利润去承担风险 也就是把回撤设在自己的成本价格 继续持有 后市如无变化 则持有到下周 上方不设止盈
+                    </li>
+                    <li><span>2014-06-20 21:09:11---- </span>白银T+D形成再次进场机会，空仓的可于4315轻仓进多，止损4295，短线目标4350-4370。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="comm t-line">
+        <img src="${CONTEXT_PATH}/img/ad-right-01.gif">
+    </div>
+
+</div>
 </#macro>

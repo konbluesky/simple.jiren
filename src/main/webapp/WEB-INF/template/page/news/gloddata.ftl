@@ -6,6 +6,6 @@
     </div>
 </div>
 <div class="d-main-right">
-    右侧暂时为空
+    <@detail_right/>
 </div>
 </@detail>

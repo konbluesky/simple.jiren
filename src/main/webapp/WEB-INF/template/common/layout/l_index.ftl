@@ -11,7 +11,7 @@
 <@topmenu/>
 </div>
 <div class="head">
-    <div>网站logo+ 宣传banner</div>
+    <@head/>
 </div>
 <div class="navigators">
 <@navbar/>

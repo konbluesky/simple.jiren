@@ -28,11 +28,20 @@ a {
 }
 .head{
     width: 1000px;
-    height: 70px;
+    height: 60px;
     margin: 0 auto;
     position: relative;
-    background: #CCFFFF;
 }
+.head .logo{
+    float:left;
+    width: 220px;
+    margin: 15px 0px 15px 0px;
+}
+.head .banner{
+    float:right;
+    width:780px;
+}
+
 .navigators{
     width: 1000px;
     margin: 0 auto;
@@ -277,6 +286,38 @@ a {
     float: left;
 }
 
+.column-1 {
+    overflow: hidden;
+}
+.column-1 h3{
+    font: bold 14px/28px "Microsoft Yahei";
+    border-top: 2px solid #BDC4CB;
+    margin: 0 0 10px;
+}
+/*银行开户*/
+.bank-kh li {
+    float: left;
+    width: 140px;
+    height: 48px;
+    padding-top: 5px;
+    margin-right: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.bank-kh h4 {
+    color: #CB3932;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.bank-kh li:hover {
+    background: #a9dba9;
+    cursor: pointer;
+}
+
+
+/*详情页*/
 .d-main{
     width: 998px;
     border: 1px solid #F0F0F0;
@@ -353,7 +394,45 @@ a {
     margin-top: 10px;
 }
 
+/*在线解盘*/
+.comm {
+    padding: 6px 0;
+    border-left: solid #f0f0f0;
+    border-width: 1px 1px 0;
+    overflow: hidden;
+}
+.comm h3 span a {
+    color: #999;
+}
+.vip-jp {
+    height: 226px;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+.vip-jp h3 {
+    font: bold 14px/28px "Microsoft Yahei";
+    padding: 0 8px 6px;
+}
+.vip-jp h3 span{
+    font: bold 12px/28px "Microsoft Yahei";
+    float: right;
+}
+.vip-jp ul {
+    padding: 0 8px;
+    overflow: hidden;
+}
+.vip-jp li {
+    line-height: 24px;
+    color: #505050;
+}
+.vip-jp li span {
+    color: #ba3022;
+}
 /*通用样式*/
+
+.t-line{
+    border-top: 2px solid #bdc4cb;
+}
 .bold{
     font-weight: bold;
 }

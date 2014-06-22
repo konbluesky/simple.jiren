@@ -19,7 +19,7 @@ currActive 当前活动tab
         </ul>
     </div>
     <div class="quote-nav">
-        这里是站内公告内容这里是站内公告内容这里是站内公告内容这里是站内公告内容这里是站内公告内容
+        敬请期待,人投网将于2014年06月24号上线
     </div>
 </div>
 </#macro>
@@ -208,15 +208,7 @@ currActive 当前活动tab
 
 
 <#macro columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0 listgroup={}>
-<script type="text/javascript">
-    (function(){
-        $(document).on("mousemove",".columnTab .hd li",function(event){
-            $(this).addClass("on").siblings().removeClass("on");
-            var i=$(this).index();
-            var blist=$(".columnTab .bd div").hide().eq(i).show();
-        });
-    })();
-</script>
+
 <div class="columnTab">
     <div class="hd">
         <ul>
@@ -259,11 +251,10 @@ currActive 当前活动tab
             <li>
                 <h3>关于我们</h3>
 
-                <p class="weibo"><a href="http://e.weibo.com/cngold" target="_blank">新浪微博</a></p>
+                <p class="weibo"><a href="http://e.weibo.com/peopleim" target="_blank">新浪微博</a></p>
 
-                <p class="txwb"><a href="http://t.qq.com/cngoldorg" target="_blank">腾讯微博</a></p>
+                <p class="txwb"><a href="http://t.qq.com/peopleim" target="_blank">腾讯微博</a></p>
 
-                <p class="email"><a href="http://www.baidu.com/data/rssmap.html" target="_blank">邮箱订阅</a></p>
             </li>
         </ul>
     </div>
@@ -274,25 +265,23 @@ currActive 当前活动tab
     </div>
     <div class="partner mt10">
         <h3>合作银行</h3>
-        <img src="http://res.cngoldres.com/web/index/img/cngold_img_bank.png?v=201307" alt="合作银行">
+        <img src="${CONTEXT_PATH}/img/peopleim_img_bank.png" alt="合作银行">
     </div>
 </div>
 <div class="copyright">
     <p>
-        <a href="http://www.baidu.com/data/sitemap.html" target="_blank">网站地图 </a> | <a
-            href="http://www.baidu.com/about/about.html" target="_blank">关于我们</a> | <a
-            href="http://www.baidu.com/about/contact.html" target="_blank">联系我们</a> | <a
-            href="http://www.baidu.com/advservice/index.html" target="_blank">广告服务</a> | <a
-            href="http://www.baidu.com/about/duty.html" target="_blank">免责声明</a> | <a href="http://feedback.baidu.com"
-                                                                                      target="_blank">在线留言</a> | <a
-            href="http://www.baidu.com/about/link.html" target="_blank">友情链接</a> | <a
-            href="http://www.baidu.com/data/rssmap.html" target="_blank">RSS 订阅</a> | <a
-            href="javascript:;" target="_blank">热门搜索</a>
+        <@basehref url="sitemap.html" atext="网站地图"/> |
+        <@basehref url="m/contact.html" atext="关于我们"/> |
+        <@basehref url="m/index.html" atext="联系我们"/> |
+        <@basehref url="m/duty.html" atext="广告服务"/> |
+        <@basehref url="m/link.html" atext="免责声明"/> |
+        <@basehref url="m/rssmap.html" atext="在线留言"/> |
+        <@basehref url="m/sitemap.html" atext="友情链接"/> |
     </p>
 
     <p>版权所有 © 2013-2014 <a href="javascript:;" target="_blank" title="百度广告管家"><img
             src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a>
-        <br>杭州吉人投资管理有限公司。<br>本站信息仅供投资者参考，不做为投资建议！
+        <br>本站信息仅供投资者参考，不做为投资建议！
     </p>
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -309,6 +298,17 @@ currActive 当前活动tab
 <meta name="description" content="${page.description}">
 <meta name="keywords" content="${page.keywords}">
 <meta name="author" content="${page.author}">
+</#macro>
+
+<#macro head>
+<div style="width: 100%">
+    <div class="logo">
+        <img src="${CONTEXT_PATH}/img/logo.png" width="100%">
+    </div>
+    <div class="banner">
+        <img src="${CONTEXT_PATH}/img/head_banner.gif"  width="100%">
+    </div>
+</div>
 </#macro>
 
 <#macro basehead>

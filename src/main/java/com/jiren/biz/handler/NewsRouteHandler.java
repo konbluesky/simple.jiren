@@ -28,7 +28,7 @@ public class NewsRouteHandler extends Handler {
         if(!StringUtils.isNullOrEmpty(target)){
             String reg="";
 
-            Pattern pattern = Pattern.compile("/n/(\\d{4}-\\d{2}-\\d{2})/(\\w+)\\.html");
+            Pattern pattern = Pattern.compile("/n/(\\d{4}-\\d{2}-\\d{2})/(\\w+)\\.(\\w)");
             Matcher matcher = pattern.matcher(target);
             if (matcher.find()) {
                 ndate=matcher.group(1);
