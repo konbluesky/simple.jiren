@@ -109,6 +109,7 @@ a {
     width: 1000px;
     margin: 0px auto;
     overflow: hidden;
+    border-left:  1px solid #F0F0F0;
 }
 .main-left {
     width: 300px;
@@ -224,7 +225,7 @@ a {
 .topic ul {
     border-top: 1px dotted #E9E9E9;
     margin-top: 5px;
-    padding-top: 5px;
+    padding: 5px 0px 0px 5px;
 }
 .topic .list24 li {
     height: 24px;

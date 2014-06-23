@@ -1,4 +1,4 @@
-package com.jiren.module;
+package com.jiren.module.core;
 
 /**
  * Created by konbluesky on 14-6-16.

@@ -7,7 +7,7 @@ currActive 当前活动tab
     <div class="nav-menu bold" style="position: static; top: 101px;">
         <ul>
             <li><a href="${CONTEXT_PATH}/" target="_blank" class="current">首页</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">金银资讯</a></li>
+            <li><a href="${CONTEXT_PATH}/" target="_blank">财经资讯</a></li>
             <li class="kx"><a href="${CONTEXT_PATH}/zxdata" target="_blank"><cite></cite>24小时快讯</a></li>
             <li><a href="${CONTEXT_PATH}/" target="_blank">金银分析</a></li>
             <li><a href="${CONTEXT_PATH}/" target="_blank">投资学院</a></li>
@@ -78,52 +78,44 @@ currActive 当前活动tab
 <#--当日要文-->
 <#macro topic>
 <div class="topic color-white">
-    <span class="title"><h3>今日要闻</h3></span>
-    <h4><span style="display:block;float:right;width:150px;margin-top:5px;*margin-top:6px;"><!-- 广告位：cngold首页热点文字广告二 --><script
-            type="text/javascript">BAIDU_CLB_fillSlot("786249");</script><div id="BAIDU_DUP_wrapper_786249_0">
-        <iframe id="baidu_clb_slot_iframe_786249_0" src="about:blank" onload="BAIDU_DUP_CLB_renderFrame('786249_0')"
-                width="160" height="25" vspace="0" hspace="0" allowtransparency="true" scrolling="no" marginwidth="0"
-                marginheight="0" frameborder="0"
-                style="border:0; vertical-align:bottom; margin:0; display:block;"></iframe>
-    </div><script charset="utf-8"
-                  src="http://cb.baidu.com/ecom?di=786249&amp;dcb=BAIDU_DUP_define&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dbv=2&amp;dci=0&amp;dri=0&amp;dis=0&amp;dai=6&amp;dds=&amp;drs=1&amp;dvi=7o&amp;ltu=http%3A%2F%2Fwww.baidu.com%2F&amp;liu=&amp;ltr=http%3A%2F%2Fcalendar.cngold.org%2F&amp;lcr=&amp;ps=397x309&amp;psr=1280x800&amp;par=1280x715&amp;pcs=1279x715&amp;pss=1279x432&amp;pis=-1x-1&amp;cfv=13&amp;ccd=24&amp;chi=2&amp;cja=true&amp;cpl=20&amp;cmi=64&amp;cce=true&amp;col=zh-CN&amp;cec=UTF-8&amp;cdo=-1&amp;tsr=997&amp;tlm=1401990536&amp;tcn=1402019337&amp;tpr=1402019336044&amp;dpt=none&amp;coa=&amp;baidu_id="></script></span><a
-            href="http://www.baidu.com/c/2014-06-06/c2583737.html" target="_blank" title="金价不要被迷惑了 黄金价格还没有变强"
-            style="font-family:Tahoma;">金价不要被迷惑了 黄</a>&nbsp;&nbsp;</h4>
+    <span class="title">
+        <h3>今日要闻</h3>
+    </span>
     <p>
-        <a href="http://www.baidu.com/c/2014-06-06/c2583772.html" target="_blank"
+        <a href="javascript:;" target="_blank"
            title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末</a>
-        <a href="http://www.baidu.com/c/2014-06-06/c2583758.html" target="_blank" title="国际黄金是不是又要跌了" class="last">国际黄金是不是又要跌了</a>
+        <a href="javascript:;" target="_blank" title="国际黄金是不是又要跌了" class="last">国际黄金是不是又要跌了</a>
     </p>
 
     <p>
-        <a href="http://ag.cngold.org/c/2014-06-06/c2583804.html" target="_blank" title="白银阻力弱 下方空间不大">白银阻力弱 下方空间不大</a>
-        <a href="http://ag.cngold.org/c/2014-06-05/c2583442.html" target="_blank" title="晚间欧银决议来袭 白银将如何演绎" class="last">晚间欧银决议来袭
+        <a href="javascript:;" target="_blank" title="白银阻力弱 下方空间不大">白银阻力弱 下方空间不大</a>
+        <a href="javascript:;" target="_blank" title="晚间欧银决议来袭 白银将如何演绎" class="last">晚间欧银决议来袭
             白银将如何演绎</a>
     </p>
     <ul class="list24">
 
         <li>
-            <a href="http://www.baidu.com/c/2014-06-06/c2583826.html" target="_blank" title="国际黄金价格行情难守 上冲回落概率大">国际黄金价格行情难守
+            <a href="javascript:;" target="_blank" title="国际黄金价格行情难守 上冲回落概率大">国际黄金价格行情难守
                 上冲回落概率大</a>
-            <a target="_blank" href="http://www.baidu.com/c/2014-06-06/c2583758.html">关注分界点</a>
+            <a target="_blank" href="javascript:;">关注分界点</a>
         </li>
         <li>
-            <a href="http://www.baidu.com/c/2014-06-06/c2583802.html" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
+            <a href="javascript:;" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
                 黄金价格谨防被诱空</a>
-            <a target="_blank" href="http://www.baidu.com/c/2014-06-06/c2583737.html">不要被迷惑</a>
+            <a target="_blank" href="javascript:;">不要被迷惑</a>
         </li>
         <li>
-            <a href="http://www.baidu.com/c/2014-06-06/c2583744.html" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
-            <a target="_blank" href="http://www.baidu.com/c/2014-06-06/c2583740.html">今日行情分析</a>
+            <a href="javascript:;" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
+            <a target="_blank" href="javascript:;">今日行情分析</a>
         </li>
         <li>
-            <a href="http://www.baidu.com/c/2014-06-06/c2583802.html" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
+            <a href="javascript:;" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
                 黄金价格谨防被诱空</a>
-            <a target="_blank" href="http://www.baidu.com/c/2014-06-06/c2583737.html">不要被迷惑</a>
+            <a target="_blank" href="javascript:;">不要被迷惑</a>
         </li>
         <li>
-            <a href="http://www.baidu.com/c/2014-06-06/c2583744.html" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
-            <a target="_blank" href="http://www.baidu.com/c/2014-06-06/c2583740.html">今日行情分析</a>
+            <a href="javascript:;" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
+            <a target="_blank" href="javascript:;">今日行情分析</a>
         </li>
     </ul>
 </div>
@@ -160,8 +152,8 @@ currActive 当前活动tab
             <ul class="login-pop">
                 <li class="reg-box">
                     <p>还没有帐号？免费注册一个吧！</p>
-                    <a href="http://passport.baidu.com/register/add.htm?source=&amp;service=" target="_blank">快速注册</a>
-                    <a href="http://passport.baidu.com/connect/tencent/login.htm?service=" target="_blank"
+                    <a href="javascript:;" target="_blank">快速注册</a>
+                    <a href="javascript:;" target="_blank"
                        class="btn-qq">使用QQ帐号登录</a>
                 </li>
                 <li class="login-box">
@@ -183,7 +175,7 @@ currActive 当前活动tab
                                onclick="formSubmitByIndex();">
 
                         <p>
-                            <label class="link"><a href="http://passport.baidu.com/resetPassport/forgetPassword.htm"
+                            <label class="link"><a href="javascript:;"
                                                    target="_blank">忘记密码？</a></label>
                             <input type="checkbox" name="rememberMe" id="rememberMe" value="true" tabindex="4"
                                    class="check">
@@ -196,11 +188,11 @@ currActive 当前活动tab
         <li class="topmenu-pop" id="indexLoginInfo" style="display: none;"><a class="arrow" href="javascript:;"><span
                 id="cngoldTimeShow">下午好</span>，<span id="cngoldLoginName">jack88</span></a>
             <ul>
-                <li><a href="http://my.baidu.com" target="_blank">个人用户中心</a></li>
+                <li><a href="javascript:;" target="_blank">个人用户中心</a></li>
                 <li><a onclick="loginOutByIndex();"><b>登出</b></a></li>
             </ul>
         </li>
-        <li class="topmenu-pop"><a class="on" href="http://www.baidu.com/fuwu.html" target="_blank">产品服务中心</a></li>
+        <li class="topmenu-pop"><a class="on" href="javascript:;" target="_blank">产品服务中心</a></li>
         <li class="topmenu-pop"><span class="tel bold red">咨询热线：000-000-0000</span></li>
     </ul>
 </div>
@@ -214,7 +206,7 @@ currActive 当前活动tab
         <ul>
         <#list tabs as tname>
             <li <#if tab_index=tname_index>class="on"</#if>>
-                <h3><a href="http://www.cngold.org/matter/jintiao/" target="_blank">${tname}</a></h3>
+                <h3><a href="javascript:;" target="_blank">${tname}</a></h3>
             </li>
         </#list>
         </ul>
@@ -251,9 +243,9 @@ currActive 当前活动tab
             <li>
                 <h3>关于我们</h3>
 
-                <p class="weibo"><a href="http://e.weibo.com/peopleim" target="_blank">新浪微博</a></p>
+                <p class="weibo"><a href="javascript:;" target="_blank">新浪微博</a></p>
 
-                <p class="txwb"><a href="http://t.qq.com/peopleim" target="_blank">腾讯微博</a></p>
+                <p class="txwb"><a href="javascript:;" target="_blank">腾讯微博</a></p>
 
             </li>
         </ul>
@@ -318,11 +310,17 @@ currActive 当前活动tab
 <script type="text/javascript" src="${CONTEXT_PATH}/js/bootstrap.min.js"></script>
 </#macro>
 
-<#macro breadcrumb>
+<#macro breadcrumb breadcrumbView>
 <ul class="breadcrumb" style="margin: 0 0 0 0px;">
-    <li><a href="#">首页</a> <span class="divider">/</span></li>
-    <li><a href="#">新闻</a> <span class="divider">/</span></li>
-    <li class="active">你问啊啊</li>
+    <#list breadcrumbView as link>
+        <li>
+            <@basehref atext=link.text/>
+            <span class="divider">/</span>
+        </li>
+        <#if link_index == breadcrumbView.size()>
+            <li class="active">link.text</li>
+        </#if>
+    </#list>
 </ul>
 </#macro>
 

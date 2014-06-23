@@ -16,16 +16,6 @@
     </div>
     <div class="main-right">
         <#if listgroup??>
-        <@columntab tabs=['国际黄黑','国际白黑','现货黄金','现货白银'] tab_index=0 listgroup=listgroup/>
-        </#if>
-    </div>
-</div>
-<div class="section">
-    <div class="main-left">
-        <@topic/>
-    </div>
-    <div class="main-right">
-        <#if listgroup??>
             <@columntab tabs=['国际黄黑','国际白黑','现货黄金','现货白银'] tab_index=0 listgroup=listgroup/>
         </#if>
     </div>
@@ -87,6 +77,15 @@
         <#if listgroup??>
             <@columntab tabs=['国际黄黑','国际白黑','现货黄金','现货白银'] tab_index=0 listgroup=listgroup/>
         </#if>
+    </div>
+    <div class="section">
+        <div class="main-left">
+            <@topic/>
+        </div>
+        <div class="main-right">
+            <iframe height="248"
+                    marginheight="0" border="0" src="http://gold.ccb.com/cn/gold/hjhq/shhj.html" frameborder="0" width="100%" name="exobud_mp" marginwidth="0" scrolling="no"></iframe>
+        </div>
     </div>
 </div>
 </@indexlayout>
