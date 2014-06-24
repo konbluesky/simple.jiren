@@ -118,6 +118,40 @@ a {
     border-right: 1px solid #F0F0F0;
     overflow: hidden;
 }
+.main_center {
+    float: left;
+    width: 488px;
+    border: 1px solid #f0f0f0;
+    border-top: 2px solid #417999;
+    margin-bottom: 10px;
+}
+.main_news_list h2 {
+    background: #fafafa url(../img/center_panel02_tit_bg.png) no-repeat 8px center;
+    border-bottom: 1px solid #f0f0f0;
+    font: bold 14px/30px "Microsoft Yahei";
+    color: #ba3022;
+    text-indent: 28px;
+}
+.main_news_list ul{
+    padding: 15px 14px 0;
+}
+.main_news_list li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.main_news_list li span {
+    float: right;
+    color: #999;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.main_news_list li a {
+    /*color: #3b6fb3;*/
+    background: url(../img/dian.gif) no-repeat left 5px;
+    padding-left: 12px;
+}
 /*border*1 + margin*10*/
 .main-right {
     width: 689px;
@@ -429,8 +463,45 @@ a {
 .vip-jp li span {
     color: #ba3022;
 }
-/*通用样式*/
 
+
+.zx-group{
+    padding: 10px 0px 10px 10px;
+}
+.zx-group h3{
+    font: bold 14px/28px "Microsoft Yahei";
+}
+.type-groups{
+    float:left;
+}
+.type-groups dt{
+    font-weight: bold;
+    line-height: 30px;
+}
+.type-groups dd{
+    float:left;
+    text-align: center;
+    width: 73px;
+    height: 23px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.type-groups dd a{
+    display: block;
+    width: 79px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    color: #505050;
+    background: #f2f2f2;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.type-groups dd .active,.type-groups dd a:hover{
+    background: #417999;
+    color: #fff;
+}
+/*通用样式*/
 .t-line{
     border-top: 2px solid #bdc4cb;
 }

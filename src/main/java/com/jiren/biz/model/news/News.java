@@ -7,4 +7,5 @@ import com.jfinal.plugin.activerecord.Model;
  */
 public class News extends Model<News>{
     public final static News dao=new News();
+
 }

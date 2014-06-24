@@ -3,8 +3,11 @@ package com.jiren.biz.control.index;
 import com.jfinal.plugin.activerecord.Page;
 import com.jiren.base.control.AbstractSiteControl;
 import com.jiren.biz.model.news.News;
+import com.jiren.module.breadcrumb.BreadcrumbModule;
+import com.jiren.module.core.BaseModule;
 import com.jiren.module.core.IModule;
 import com.jiren.module.core.ModuleException;
+import com.jiren.module.meta.MetaModule;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -17,14 +20,15 @@ import java.util.Map;
 public class IndexControl extends AbstractSiteControl {
 
     public void index(){
+        setModule(new MetaModule(this.getRequest()));
         setModule(new IndexModule(this.getRequest()));
+        setModule(new BreadcrumbModule(this.getRequest(),null));
         execute();
         renderFreeMarker("/index.html");
     }
-    private class IndexModule implements IModule{
-        private HttpServletRequest request;
+    private class IndexModule extends BaseModule {
         public IndexModule(HttpServletRequest req){
-            request=req;
+            super(req);
         }
         @Override
         public void execute() throws ModuleException {
@@ -34,7 +38,7 @@ public class IndexControl extends AbstractSiteControl {
             listgroup.put(1,nlist.getList().subList(14,28));
             listgroup.put(2,nlist.getList().subList(28,42));
             listgroup.put(3,nlist.getList().subList(42,56));
-            setAttr("listgroup",listgroup);
+            getRequest().setAttribute("listgroup", listgroup);
         }
     }
 }

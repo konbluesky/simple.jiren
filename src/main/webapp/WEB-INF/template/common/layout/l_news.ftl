@@ -1,9 +1,11 @@
 <#include "/WEB-INF/template/common/macro/base.ftl"/>
-<#macro detail>
+<#macro newslayout>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <#if metaView??>
+        <@title metaView/>
+    </#if>
     <@basehead/>
 </head>
 <body>
@@ -17,7 +19,9 @@
     <@navbar/>
 </div>
 <div class="d-main">
-    <@breadcrumb/>
+    <#if breadcrumbView??>
+        <@breadcrumb breadcrumbView/>
+    </#if>
     <#--正文内容-->
     <#nested />
 </div>
@@ -93,4 +97,28 @@
     </div>
 
 </div>
+</#macro>
+
+
+<#--新闻类别列表-->
+<#macro typegroup typesView currType="">
+    <div class="zx-group">
+        <h3>资讯分类</h3>
+        <#if typesView??>
+            <dl class="type-groups">
+            <dt>财经资讯</dt>
+            <#list typesView as t>
+                <#if (t_index > 2)>
+                    <dd>
+                        <#if t.value==currType>
+                            <@basehref url="n/1"+t.value atext=t.name class="active"/>
+                        <#else >
+                            <@basehref url="n/"+t.value atext=t.name/>
+                        </#if>
+                    </dd>
+                </#if>
+            </#list>
+            </dl>
+        </#if>
+    </div>
 </#macro>

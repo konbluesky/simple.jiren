@@ -7,7 +7,7 @@ currActive 当前活动tab
     <div class="nav-menu bold" style="position: static; top: 101px;">
         <ul>
             <li><a href="${CONTEXT_PATH}/" target="_blank" class="current">首页</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">财经资讯</a></li>
+            <li><a href="${CONTEXT_PATH}/n" target="_blank">财经资讯</a></li>
             <li class="kx"><a href="${CONTEXT_PATH}/zxdata" target="_blank"><cite></cite>24小时快讯</a></li>
             <li><a href="${CONTEXT_PATH}/" target="_blank">金银分析</a></li>
             <li><a href="${CONTEXT_PATH}/" target="_blank">投资学院</a></li>
@@ -238,7 +238,7 @@ currActive 当前活动tab
         <ul>
             <li>
                 <h3>微信二维码</h3>
-                <img src="http://res.cngoldres.com/web/index/img/cngold_img_qrcode.png" alt="微信二维码">
+                <img src="${CONTEXT_PATH}/img/peopleim_img_qrcode.png" alt="微信二维码">
             </li>
             <li>
                 <h3>关于我们</h3>
@@ -259,6 +259,42 @@ currActive 当前活动tab
         <h3>合作银行</h3>
         <img src="${CONTEXT_PATH}/img/peopleim_img_bank.png" alt="合作银行">
     </div>
+    <div>
+        <!-- 代码begin -->
+        <div class="fixedBox">
+            <UL class="fixedBoxList">
+                <LI class="fixeBoxLi Service"> <span class="fixeBoxSpan"></span> <strong>在线客服</strong>
+                    <div class="ServiceBox">
+                        <div class="bjfff"></div>
+                        <dl >
+                            <dt><img src="${CONTEXT_PATH}/img/Service1.jpg"></dt>
+                            <dd> <strong>在线QQ客服</strong>
+                                <P class="p1">9:00-18:00</P>
+                                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=181997883&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</A></P>
+                            </dd>
+                        </dl>
+                        <dl >
+                            <dt><img src="${CONTEXT_PATH}/img/Service1.jpg"></dt>
+                            <dd> <strong>在线QQ客服</strong>
+                                <P class="p1">16:00-24:00</P>
+                                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=535240743&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</A></P>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="${CONTEXT_PATH}/img/Service2.jpg"></dt>
+                            <dd> <strong>网页在线客服</strong>
+                                <P class="p1">9:00-22:00</P>
+                                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=535240743&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</A></P>
+                            </dd>
+                        </dl>
+                    </div>
+                </LI>
+                <LI class="fixeBoxLi Home"> <A href="http://www.peopleim.cn/"> <span class="fixeBoxSpan"></span> <strong>返回首页</strong> </A> </LI>
+                <LI class="fixeBoxLi BackToTop"> <span class="fixeBoxSpan"></span> <strong>返回顶部</strong> </LI>
+            </UL>
+        </div>
+        <script type="text/javascript" src="${CONTEXT_PATH}/js/chat_service.js"></script>
+    </div>
 </div>
 <div class="copyright">
     <p>
@@ -271,8 +307,7 @@ currActive 当前活动tab
         <@basehref url="m/sitemap.html" atext="友情链接"/> |
     </p>
 
-    <p>版权所有 © 2013-2014 <a href="javascript:;" target="_blank" title="百度广告管家"><img
-            src="http://res.cngoldres.com/web/img/baidu_adm.gif" border="0" alt="百度广告管家"></a>
+    <p>版权所有 © 2013-2014
         <br>本站信息仅供投资者参考，不做为投资建议！
     </p>
     <script type="text/javascript">
@@ -285,11 +320,11 @@ currActive 当前活动tab
 
 </#macro>
 
-<#macro title page>
-<title>${page.title}</title>
-<meta name="description" content="${page.description}">
-<meta name="keywords" content="${page.keywords}">
-<meta name="author" content="${page.author}">
+<#macro title metaView>
+<title>${metaView.title}</title>
+<meta name="description" content="${metaView.description}">
+<meta name="keywords" content="${metaView.keywords}">
+<meta name="author" content="人投网">
 </#macro>
 
 <#macro head>
@@ -306,19 +341,22 @@ currActive 当前活动tab
 <#macro basehead>
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/base.css" />
+<link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/chatservice.css" />
 <script type="text/javascript" src="${CONTEXT_PATH}/js/jquery.js"></script>
 <script type="text/javascript" src="${CONTEXT_PATH}/js/bootstrap.min.js"></script>
 </#macro>
 
+<#--面包屑-->
 <#macro breadcrumb breadcrumbView>
 <ul class="breadcrumb" style="margin: 0 0 0 0px;">
     <#list breadcrumbView as link>
-        <li>
-            <@basehref atext=link.text/>
-            <span class="divider">/</span>
-        </li>
-        <#if link_index == breadcrumbView.size()>
-            <li class="active">link.text</li>
+        <#if link_index+1 != breadcrumbView.size()>
+            <li>
+                <@basehref atext=link.text/>
+                <span class="divider">/</span>
+            </li>
+        <#else>
+            <li class="active">${link.text}</li>
         </#if>
     </#list>
 </ul>
@@ -332,7 +370,10 @@ currActive 当前活动tab
 
 <#--基础连接生成-->
 <#macro basehref url="" atext="连接文字" target="_blank" title="" class="">
-    <a href="${CONTEXT_PATH}/${url}" target="${target}" class="${class}" title="${title}">${atext}</a>
+    <a href="${CONTEXT_PATH}/${url}" target="${target}"
+       <#if class!="">class="${class}"</#if>
+       <#if title!="">title="${title}"</#if>
+       >${atext}</a>
 </#macro>
 <#macro newsUrl news>
     <@basehref url="n/"+news.pdate+"/"+news.id+".html"
