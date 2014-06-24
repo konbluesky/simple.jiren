@@ -29,19 +29,7 @@
         <echo message="finished"/>
     </target>
 <!--部署生产环境-->
-    <target name="remote-real">
-        <exec command="mvn package"/>
-            <scp
-                password="${remote2.password}"
-                todir="${remote2.username}@${remote2.address}:${remote2.war.address}"
-                trust="true"
-                >
-            <fileset dir="target/jiren">
-                <exclude name="WEB-INF/a_little_config.txt"/>
-            </fileset>
-        </scp>
-    </target>
-    <target name="remote-real-quick">
+    <target name="remote-real-all">
         <exec command="mvn package"/>
         <scp
                 password="${remote2.password}"
@@ -50,6 +38,25 @@
                 >
             <fileset dir="target/jiren">
                 <exclude name="WEB-INF/a_little_config.txt"/>
+            </fileset>
+        </scp>
+        <sshexec host="${remote2.address}"
+                 username="${remote2.username}"
+                 password="${remote2.password}"
+                 command="sh ~/script/restart.sh;" trust="true"/>
+    </target>
+<!--部署静态资源-->
+    <target name="remote-real-template">
+        <exec command="mvn package"/>
+        <scp
+                password="${remote2.password}"
+                todir="${remote2.username}@${remote2.address}:${remote2.war.address}"
+                trust="true"
+                >
+            <fileset dir="target/jiren">
+                <include name="js/*"/>
+                <include name="css/*"/>
+                <include name="WEB-INF/template/*"/>
             </fileset>
         </scp>
     </target>

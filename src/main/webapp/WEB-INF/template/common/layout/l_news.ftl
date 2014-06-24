@@ -111,9 +111,9 @@
                 <#if (t_index > 2)>
                     <dd>
                         <#if t.value==currType>
-                            <@basehref url="n/1"+t.value atext=t.name class="active"/>
+                            <@basehref url="n/1"+t.value atext=t.name class="active" target="_self"/>
                         <#else >
-                            <@basehref url="n/"+t.value atext=t.name/>
+                            <@basehref url="n/"+t.value atext=t.name target="_self"/>
                         </#if>
                     </dd>
                 </#if>

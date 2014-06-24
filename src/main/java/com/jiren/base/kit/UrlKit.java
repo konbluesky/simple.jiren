@@ -1,5 +1,6 @@
 package com.jiren.base.kit;
 
+import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -25,6 +26,10 @@ public class UrlKit {
             sb.append(values[i]);
         }
         return sb.toString();
+    }
+    public static String makeUrlRestFulParam(String url,Collection<String> values){
+        String[] c=values.toArray(new String[values.size()]);
+        return makeUrlRestFulParam(url,c);
     }
     /**
      * 构建普通带参数的url 例如:?abcd=1&bcd=1

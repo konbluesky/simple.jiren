@@ -1,4 +1,94 @@
 <#--
+    Top导航栏
+   -->
+<#macro topmenu>
+<div class="topmenu">
+    <ul class="pull-left">
+        <li class="topmenu-pop">
+            <a href="javascript:;">设为首页</a>
+        </li>
+        <li class="topmenu-pop">
+            <a onclick="jscript:window.external.addFavorite('http://www.peopleim.cn/')">加入收藏</a>
+        </li>
+        <li class="topmenu-pop">
+            <a href="javascript:;">关于我们</a>
+        </li>
+        <!--<li class="topmenu-pop">-->
+        <!--<a class="arrow" href="javascript:;" target="_blank">我的金投</a>-->
+        <!--<ul>-->
+        <!--<li><a href="javascript:;">我的交易大赛</a></li>-->
+        <!--<li><a href="javascript:;">我的专家解盘</a></li>-->
+        <!--<li><a href="javascript:;">我的模拟交易</a></li>-->
+        <!--<li><a href="javascript:;">我的走势观点</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+    </ul>
+    <ul class="pull-right">
+        <li class="topmenu-pop" id="indexLoginDiv" style="display: none;"><a class="arrow" href="javascript:;"
+                                                                             target="_blank">登录</a>
+            <ul class="login-pop">
+                <li class="reg-box">
+                    <p>还没有帐号？免费注册一个吧！</p>
+                    <a href="javascript:;" target="_blank">快速注册</a>
+                    <a href="javascript:;" target="_blank"
+                       class="btn-qq">使用QQ帐号登录</a>
+                </li>
+                <li class="login-box">
+                    <span class="tip">若您已有人投网帐号，可直接登录</span>
+
+                    <form id="loginForm" name="loginForm" class="login_form" method="post">
+                        <p>
+                            <label class="username">帐号</label>
+                            <input id="username" name="username" class="login_input" tabindex="1" value="用户名/email/手机"
+                                   type="text" size="25" autocomplete="false">
+                        </p>
+
+                        <p>
+                            <label class="password">密码</label>
+                            <input id="password" name="password" class="login_input" tabindex="2" type="password"
+                                   value="" size="25">
+                        </p>
+                        <input type="button" id="login_botton" value="登 录" class="login_botton" name="submitForm"
+                               onclick="formSubmitByIndex();">
+
+                        <p>
+                            <label class="link"><a href="javascript:;"
+                                                   target="_blank">忘记密码？</a></label>
+                            <input type="checkbox" name="rememberMe" id="rememberMe" value="true" tabindex="4"
+                                   class="check">
+                            <label class="zidong">记住密码</label>
+                        </p>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    <#--<li class="topmenu-pop" id="indexLoginInfo" style="display: none;"><a class="arrow" href="javascript:;"><span-->
+    <#--id="cngoldTimeShow">下午好</span>，<span id="cngoldLoginName">jack88</span></a>-->
+    <#--<ul>-->
+    <#--<li><a href="javascript:;" target="_blank">个人用户中心</a></li>-->
+    <#--<li><a onclick="loginOutByIndex();"><b>登出</b></a></li>-->
+    <#--</ul>-->
+    <#--</li>-->
+        <li class="topmenu-pop"><a class="on" href="javascript:;" target="_blank">产品服务中心</a></li>
+        <li class="topmenu-pop"><span class="tel bold red">咨询热线：000-000-0000</span></li>
+    </ul>
+</div>
+</#macro>
+
+
+<#--head部分-->
+<#macro head>
+<div style="width: 100%">
+    <div class="logo">
+        <img src="${CONTEXT_PATH}/img/logo.png" width="100%">
+    </div>
+    <div class="banner">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=181997883&site=qq&menu=yes"><img src="${CONTEXT_PATH}/img/head_banner.gif"  width="100%"></a>
+    </div>
+</div>
+</#macro>
+
+<#--
 宏:导航条
 currActive 当前活动tab
 -->
@@ -9,13 +99,13 @@ currActive 当前活动tab
             <li><a href="${CONTEXT_PATH}/" target="_blank" class="current">首页</a></li>
             <li><a href="${CONTEXT_PATH}/n" target="_blank">财经资讯</a></li>
             <li class="kx"><a href="${CONTEXT_PATH}/zxdata" target="_blank"><cite></cite>24小时快讯</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">金银分析</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">投资学院</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">新华银</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">中玺银</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">财经日历</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">开户指南</a></li>
-            <li><a href="${CONTEXT_PATH}/" target="_blank">投诉反馈</a></li>
+            <li><a href="javascript:;" target="_blank">金银分析</a></li>
+            <li><a href="javascript:;" target="_blank">投资学院</a></li>
+            <li><a href="javascript:;" target="_blank">新华银</a></li>
+            <li><a href="javascript:;" target="_blank">中玺银</a></li>
+            <li><a href="javascript:;" target="_blank">财经日历</a></li>
+            <li><a href="javascript:;" target="_blank">开户指南</a></li>
+            <li><a href="javascript:;" target="_blank">投诉反馈</a></li>
         </ul>
     </div>
     <div class="quote-nav">
@@ -117,83 +207,6 @@ currActive 当前活动tab
             <a href="javascript:;" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
             <a target="_blank" href="javascript:;">今日行情分析</a>
         </li>
-    </ul>
-</div>
-</#macro>
-
-<#--
-    Top导航栏
-   -->
-<#macro topmenu>
-<div class="topmenu">
-    <ul class="pull-left">
-        <li class="topmenu-pop">
-            <a href="javascript:;">设为首页</a>
-        </li>
-        <li class="topmenu-pop">
-            <a onclick="jscript:window.external.addFavorite('http://www.hzjiren.com/')">加入收藏</a>
-        </li>
-        <li class="topmenu-pop">
-            <a href="javascript:;">关于我们</a>
-        </li>
-        <!--<li class="topmenu-pop">-->
-        <!--<a class="arrow" href="javascript:;" target="_blank">我的金投</a>-->
-        <!--<ul>-->
-        <!--<li><a href="javascript:;">我的交易大赛</a></li>-->
-        <!--<li><a href="javascript:;">我的专家解盘</a></li>-->
-        <!--<li><a href="javascript:;">我的模拟交易</a></li>-->
-        <!--<li><a href="javascript:;">我的走势观点</a></li>-->
-        <!--</ul>-->
-        <!--</li>-->
-    </ul>
-    <ul class="pull-right">
-        <li class="topmenu-pop" id="indexLoginDiv" style="display: none;"><a class="arrow" href="javascript:;"
-                                                                             target="_blank">登录</a>
-            <ul class="login-pop">
-                <li class="reg-box">
-                    <p>还没有帐号？免费注册一个吧！</p>
-                    <a href="javascript:;" target="_blank">快速注册</a>
-                    <a href="javascript:;" target="_blank"
-                       class="btn-qq">使用QQ帐号登录</a>
-                </li>
-                <li class="login-box">
-                    <span class="tip">若您已有金投网帐号，可直接登录</span>
-
-                    <form id="loginForm" name="loginForm" class="login_form" method="post">
-                        <p>
-                            <label class="username">帐号</label>
-                            <input id="username" name="username" class="login_input" tabindex="1" value="用户名/email/手机"
-                                   type="text" size="25" autocomplete="false">
-                        </p>
-
-                        <p>
-                            <label class="password">密码</label>
-                            <input id="password" name="password" class="login_input" tabindex="2" type="password"
-                                   value="" size="25">
-                        </p>
-                        <input type="button" id="login_botton" value="登 录" class="login_botton" name="submitForm"
-                               onclick="formSubmitByIndex();">
-
-                        <p>
-                            <label class="link"><a href="javascript:;"
-                                                   target="_blank">忘记密码？</a></label>
-                            <input type="checkbox" name="rememberMe" id="rememberMe" value="true" tabindex="4"
-                                   class="check">
-                            <label class="zidong">记住密码</label>
-                        </p>
-                    </form>
-                </li>
-            </ul>
-        </li>
-        <li class="topmenu-pop" id="indexLoginInfo" style="display: none;"><a class="arrow" href="javascript:;"><span
-                id="cngoldTimeShow">下午好</span>，<span id="cngoldLoginName">jack88</span></a>
-            <ul>
-                <li><a href="javascript:;" target="_blank">个人用户中心</a></li>
-                <li><a onclick="loginOutByIndex();"><b>登出</b></a></li>
-            </ul>
-        </li>
-        <li class="topmenu-pop"><a class="on" href="javascript:;" target="_blank">产品服务中心</a></li>
-        <li class="topmenu-pop"><span class="tel bold red">咨询热线：000-000-0000</span></li>
     </ul>
 </div>
 </#macro>
@@ -327,16 +340,7 @@ currActive 当前活动tab
 <meta name="author" content="人投网">
 </#macro>
 
-<#macro head>
-<div style="width: 100%">
-    <div class="logo">
-        <img src="${CONTEXT_PATH}/img/logo.png" width="100%">
-    </div>
-    <div class="banner">
-        <img src="${CONTEXT_PATH}/img/head_banner.gif"  width="100%">
-    </div>
-</div>
-</#macro>
+
 
 <#macro basehead>
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap.min.css" />

@@ -15,9 +15,9 @@
             </#list>
         </ul>
     </div>
-    <div>
+    <div style="padding-left: 10px">
         <#include "/WEB-INF/template/common/macro/paginate.ftl" />
-    <@paginate currentPage=newslist.pageNumber totalPage=newslist.totalPage actionUrl="n/" urlParas=urlparams />
+        <@paginate currentPage=newslist.pageNumber totalPage=newslist.totalPage actionUrl="n/" urlParas=urlparams />
     </div>
 </div>
 

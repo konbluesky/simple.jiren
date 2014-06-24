@@ -15,20 +15,25 @@ import java.util.List;
  * Created by konbluesky on 14-6-16.
  */
 public class NewsControl extends AbstractSiteControl {
-
+    /**
+     * 首页
+     */
     public void index(){
         int pagenum=getParaToInt(1,1);
 //        面包屑
         setModule(new BreadcrumbModule(this.getRequest(),"首页","财经资讯"));
         setModule(new ListLeftModule((this.getRequest())));
-        Page<News> lists = News.dao.paginate(pagenum, Constant.PAGE_SIZE_NEWS,"select * "," from news_normal");
+        Page<News> lists = News.dao.paginate(pagenum, Constant.PAGE_SIZE_NEWS,"select * "," from news_normal order by pdate desc");
         setAttr("newslist", lists);
         execute();
         renderFreeMarker(PathBizKit.getPagePath()+"/news/newslist.ftl");
     }
 
+    /**
+     * 详情页面
+     */
     public void info(){
-        String ndate=getAttr("ndate");
+        String ndate=getPara(1);
         String nid=getAttr("nid");
         News news=News.dao.findById(nid);
         setModule(new BreadcrumbModule(this.getRequest(),news));
@@ -37,6 +42,9 @@ public class NewsControl extends AbstractSiteControl {
         renderFreeMarker(PathBizKit.getPagePath()+"/news/detail.ftl");
     }
 
+    /**
+     * 新闻列表按类别
+     */
     public void listbytype(){
         String type=getPara(1);//type
         int pnum=getParaToInt(2,1);//pagenum from news_normal where 1=1
