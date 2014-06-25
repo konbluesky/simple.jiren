@@ -104,7 +104,7 @@ currActive 当前活动tab
             <li><a href="javascript:;" target="_blank">新华银</a></li>
             <li><a href="javascript:;" target="_blank">中玺银</a></li>
             <li><a href="javascript:;" target="_blank">财经日历</a></li>
-            <li><a href="javascript:;" target="_blank">开户指南</a></li>
+            <li><a href="${CONTEXT_PATH}/kaihu" target="_blank">开户指南</a></li>
             <li><a href="javascript:;" target="_blank">投诉反馈</a></li>
         </ul>
     </div>
@@ -171,19 +171,15 @@ currActive 当前活动tab
     <span class="title">
         <h3>今日要闻</h3>
     </span>
-    <p>
+    <p style="padding-left: 10px;">
         <a href="javascript:;" target="_blank"
-           title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末</a>
-        <a href="javascript:;" target="_blank" title="国际黄金是不是又要跌了" class="last">国际黄金是不是又要跌了</a>
+           title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末
+        </a>
     </p>
-
-    <p>
-        <a href="javascript:;" target="_blank" title="白银阻力弱 下方空间不大">白银阻力弱 下方空间不大</a>
-        <a href="javascript:;" target="_blank" title="晚间欧银决议来袭 白银将如何演绎" class="last">晚间欧银决议来袭
-            白银将如何演绎</a>
+    <p style="padding-left: 10px;">
+        <a href="javascript:;" target="_blank" title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末</a>
     </p>
     <ul class="list24">
-
         <li>
             <a href="javascript:;" target="_blank" title="国际黄金价格行情难守 上冲回落概率大">国际黄金价格行情难守
                 上冲回落概率大</a>

@@ -54,7 +54,7 @@ a {
     margin: 0 auto;
     height: 40px;
     line-height: 40px;
-    background: #417999 url(../peopleim_nav.png) 0 0 repeat-x;
+    background: #417999 url(../img/peopleim_nav.png) 0 0 repeat-x;
     overflow: hidden;
 }
 .nav-menu li {
@@ -110,6 +110,7 @@ a {
     margin: 0px auto;
     overflow: hidden;
     border-left:  1px solid #F0F0F0;
+    border-right:  1px solid #F0F0F0;
 }
 .main-left {
     width: 300px;
@@ -244,9 +245,6 @@ a {
     box-shadow: 1px 2px 1px rgba(0,0,0,0.072);
     -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,0.072);
 }
-.topic .title{
-
-}
 .topic h3 {
     border-top: 2px solid #BDC4CB;
     border-bottom: 1px solid #F4F4F5;
@@ -323,12 +321,29 @@ a {
 
 .column-1 {
     overflow: hidden;
+    font: bold 14px/28px "Microsoft Yahei";
 }
 .column-1 h3{
-    font: bold 14px/28px "Microsoft Yahei";
     border-top: 2px solid #BDC4CB;
+    font: bold 14px/28px "Microsoft Yahei";
+    padding: 0 8px 6px;
     margin: 0 0 10px;
 }
+.column-1 .tth3{
+    font: bold 14px/28px "Microsoft Yahei";
+    color: #c67605;
+    padding: 0 8px 6px;
+    margin: 0 0 10px;
+}
+.column-1 span{
+    float: right;
+    font:12px "Microsoft Yahei";
+    padding-top:5px;
+}
+.column-1 span a{
+    color: #999;
+}
+
 /*银行开户*/
 .bank-kh li {
     float: left;
@@ -500,6 +515,15 @@ a {
 .type-groups dd .active,.type-groups dd a:hover{
     background: #417999;
     color: #fff;
+}
+.block-title{
+    width: 100%;
+    background-color: #f8f8f8;
+    border-bottom: 1px #dcdcdc solid;
+    height: 31px;
+    line-height: 31px;
+    background: url(../img/img_date_sharebg.png) no-repeat;
+    text-indent: 13px;
 }
 /*通用样式*/
 .t-line{

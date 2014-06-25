@@ -16,27 +16,17 @@
     </div>
     <div class="main-right">
         <#if listgroup??>
-            <@columntab tabs=['国际黄黑','国际白黑','现货黄金','现货白银'] tab_index=0 listgroup=listgroup/>
+            <@columntab tabs=['理财故事','黄金','银行','外汇'] tab_index=0 listgroup=listgroup/>
         </#if>
     </div>
 </div>
 <div class="section">
-    <div class="main-left">
-        <@topic/>
-    </div>
-    <div class="main-right">
-        <#if listgroup??>
-            <@columntab tabs=['国际黄黑','国际白黑','现货黄金','现货白银'] tab_index=0 listgroup=listgroup/>
-        </#if>
-    </div>
+    <img src="${CONTEXT_PATH}/img/peopleim_ad_banner02.gif" width="100%">
 </div>
-        <div class="section" style="padding-left: 20px;">
-            <img src="${CONTEXT_PATH}/img/peopleim_ad_banner01.gif" width="100%">
-        </div>
 <div class="section">
     <div class="main-left">
         <div class="column-1">
-            <h3><span><a href="http://www.cngold.org/kaihu/" target="_blank">开户指南 &gt;</a></span>银行黄金白银开户</h3>
+            <h3><span><a href="http://${CONTEXT_PATH}/kaihu/" target="_blank">开户指南 &gt;</a></span>银行黄金白银开户</h3>
             <ul class="bank-kh">
                 <li>
                     <h4><img src="${CONTEXT_PATH}/img/peopleim_bank_gf.png" alt="广发银行">广发银行</h4>
@@ -72,6 +62,20 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="main-right">
+        <#if listgroup??>
+            <@columntab tabs=['期货','基金','债劵','股票'] tab_index=0 listgroup=listgroup/>
+        </#if>
+    </div>
+</div>
+<div class="section" style="padding-left: 20px;">
+    <img src="${CONTEXT_PATH}/img/peopleim_ad_banner01.gif" width="100%">
+</div>
+<div class="section">
+    <div class="main-left">
+        <@topic/>
+
     </div>
     <div class="main-right">
         <#if listgroup??>

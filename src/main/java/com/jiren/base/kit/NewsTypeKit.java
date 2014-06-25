@@ -27,6 +27,7 @@ public class NewsTypeKit {
         codemap.put("qh","期货");
         codemap.put("qz","期指");
         codemap.put("hj","黄金");
+        codemap.put("by","白银");
         codemap.put("yh","银行");
         codemap.put("lcgs","理财故事");
     }
@@ -38,4 +39,7 @@ public class NewsTypeKit {
         return codemap;
     }
 
+    public static String getName(String code){
+        return codemap.get(code);
+    }
 }

@@ -1,6 +1,8 @@
 package com.jiren.module.meta;
 
+import com.jiren.base.kit.NewsTypeKit;
 import com.jiren.biz.model.news.News;
+import com.jiren.biz.model.news.NewsType;
 import com.jiren.module.core.BaseModule;
 import com.jiren.module.core.IModule;
 import com.jiren.module.core.ModuleException;
@@ -26,6 +28,12 @@ public class MetaModule extends BaseModule{
     public MetaModule(HttpServletRequest req,News news){
         super(req);
         this.news=news;
+        if(news!=null){
+            String code=news.getStr("ntype");
+            this.title=news.get("newtitle")+ NewsTypeKit.getName(code);
+            this.keywords=news.get("newtitle");
+            this.description=news.get("newtitle");
+        }
     }
     public MetaModule(HttpServletRequest req,String reskey){
         super(req);

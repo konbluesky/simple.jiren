@@ -3,6 +3,7 @@ package com.jiren.biz.control.news;
 import com.jfinal.plugin.activerecord.Page;
 import com.jiren.base.config.Constant;
 import com.jiren.base.control.AbstractSiteControl;
+import com.jiren.base.kit.NewsTypeKit;
 import com.jiren.base.kit.PathBizKit;
 import com.jiren.base.kit.UrlKit;
 import com.jiren.biz.model.news.News;
@@ -34,7 +35,7 @@ public class NewsControl extends AbstractSiteControl {
      */
     public void info(){
         String ndate=getPara(1);
-        String nid=getAttr("nid");
+        String nid=getPara(2);
         News news=News.dao.findById(nid);
         setModule(new BreadcrumbModule(this.getRequest(),news));
         setAttr("nnews", news);
@@ -54,7 +55,9 @@ public class NewsControl extends AbstractSiteControl {
         }
         Page<News> lists = News.dao.paginate(pnum, Constant.PAGE_SIZE_NEWS,
                             "select * ",consql,type);
-        setModule(new BreadcrumbModule(this.getRequest(), "首页",type));
+        /*加载其他模块*/
+        //@todo 面包屑模块需修正
+        setModule(new BreadcrumbModule(this.getRequest(), "首页", NewsTypeKit.getCodemap().get(type)));
         setModule(new ListLeftModule((this.getRequest())));
 
         setAttr("newslist", lists);

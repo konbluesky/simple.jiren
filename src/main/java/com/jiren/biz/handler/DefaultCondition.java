@@ -11,13 +11,13 @@ import java.util.regex.Pattern;
 /**
  * Created by konbluesky on 14-6-24.
  */
-public class DefaultConditionI implements IRouteCondition {
+public class DefaultCondition implements IRouteCondition {
     private String targetString;
     private String regexString;
     private boolean ismatched=false;
     private String[] paramNames;
     private Map<String,String> params=new HashMap<String, String>();
-    public DefaultConditionI(String target, String regex, String[] paramNames){
+    public DefaultCondition(String target, String regex, String[] paramNames){
         this.regexString=regex;
         this.paramNames =paramNames;
         this.targetString=target;
@@ -33,7 +33,7 @@ public class DefaultConditionI implements IRouteCondition {
 
     @Override
     public Map<String, String> getParams(String srcString) {
-        if(!params.isEmpty()) return params;
+//        if(!params.isEmpty()) return params;
         Pattern pattern = Pattern.compile(regexString);
         Matcher matcher = pattern.matcher(srcString);
         if(matcher.find()){
