@@ -1,0 +1,4 @@
+db.jdbcUrl = jdbc:mysql://127.0.0.1/jiren?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+db.user = root
+db.password = root
+devMode = true

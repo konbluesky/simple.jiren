@@ -37,7 +37,24 @@
                 trust="true"
                 >
             <fileset dir="target/jiren">
-                <exclude name="WEB-INF/a_little_config.txt"/>
+                <exclude name="WEB-INF/classes/a_little_config.txt"/>
+                <exclude name="WEB-INF/lib/*.jar"/>
+            </fileset>
+        </scp>
+        <sshexec host="${remote2.address}"
+                 username="${remote2.username}"
+                 password="${remote2.password}"
+                 command="sh ~/script/restart.sh;" trust="true"/>
+    </target>
+    <!--only class-->
+    <target name="remote-real-classes">
+        <exec command="mvn package"/>
+        <scp
+                password="${remote2.password}"
+                todir="${remote2.username}@${remote2.address}:${remote2.war.address}"
+                trust="true"
+                >
+            <fileset dir="target/jiren/WEB-INF/classes">
             </fileset>
         </scp>
         <sshexec host="${remote2.address}"

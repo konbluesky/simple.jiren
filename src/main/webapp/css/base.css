@@ -319,9 +319,44 @@ a {
     float: left;
 }
 
+.columnTab{width:100%;height:248px;border-top:2px solid #417999;overflow:hidden;}
+.columnTab .hd{height:28px;position:relative;overflow:hidden;}
+.columnTab .hd ul{float:left;width:688px;border-left:1px solid #DDDDDD;background:#FAFAFA;position:absolute;height:28px;}
+.columnTab .hd li{float:left;width:171px;height:27px;line-height:27px;border-right:1px solid #DDDDDD;border-bottom:1px solid #F0F0F0;text-align:center;cursor:pointer;}
+.columnTab h3,.column-box h4{font-size:14px;font-family:"Microsoft Yahei";}
+.columnTab h3 span{margin-left:10px;background:#BA3022;padding:0 2px;border-radius:2px;color:#fff;font-size:10px;font-weight:normal;}
+.columnTab .list30{font-size:14px;}
+.column-box h4{margin-bottom:10px;}
+.column-box h4 span{float:right;font-size:12px;font-family:"宋体";}
+.column-box h4 span a{color:#999;}
+.column-box h4 span i{font-style:normal;background:#8AB119;color:#fff;padding:0 3px;font-size:14px;}
+.columnTab .hd li.on{background:#fff;border-bottom:1px solid #fff;}
+.column-box{width:648px;margin-top:10px;overflow:hidden;}
+.column-box h4{height:26px;line-height:26px;border-bottom:1px dotted #E0E0E0;font-weight:normal;}
+.column-left{width:320px;float:left;*display:inline;margin-right:10px;overflow:hidden;}
+.column-right{width:298px;overflow:hidden;}
+
+/*左侧小选项卡*/
+.columnTab2{width:100%;margin-top:-32px;overflow:hidden;}
+.columnTab2 .hd{width:140px;height:26px;margin-left:160px;margin-bottom:6px;position:relative;overflow:hidden;}
+.columnTab2 .hd ul{float:left;width:140px;position:absolute;right:0;height:20px;}
+.columnTab2 .hd li{float:left;width:60px;margin-right:9px;height:20px;line-height:20px;text-align:center;cursor:pointer;background:#F5F5F5;position:relative;border-radius:2px;}
+.columnTab2 .hd li span{position:absolute;bottom:-100px;}
+.columnTab2 .hd li.on span{color:#487F9E;bottom:-8px;left:50%;margin-left:-5px;z-index:-1}
+.columnTab2 h4{font-size:12px;font-weight:normal;}
+.columnTab2 h4 a{color:#999;}
+.columnTab2 .hd li.on{background:#487F9E;color:#fff;}
+.columnTab2 .hd li.on a{color:#fff;}
+.list24,.list30,.list-grid{width:100%;overflow:hidden;}
+.list24 li{height:24px;line-height:24px;background:url(../img/peopleim_sprite.png) -657px -77px no-repeat;text-indent:13px;overflow:hidden;}
+.list24 li span{float:right;font-size:10px;font-family:Arial;color:#a0a0a0;font-style:italic;}
+.list30 li{height:30px;line-height:30px;background:url(../img/peopleim_sprite.png) -650px -74px no-repeat;text-indent:20px;overflow:hidden;}
+.list30 .fz12 a{color:#505050;}
+.list30 .fz12 a:hover{color:#3B6FB3;}
+
 .column-1 {
     overflow: hidden;
-    font: bold 14px/28px "Microsoft Yahei";
+    font: 14px/28px "Microsoft Yahei";
 }
 .column-1 h3{
     border-top: 2px solid #BDC4CB;
@@ -543,22 +578,12 @@ a {
 .color-white{
     background-color:#fff;
 }
-
-
-.tmp-content{
-    display: block;
-    padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 13px;
-    line-height: 20px;
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre;
-    white-space: pre-wrap;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,0.15);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
+/* hack */
+/*.mt10{margin-top:10px;}*/
+/*.mt15{margin-top:15px;}*/
+/*.mt30{margin-top:30px;}*/
+/*.mr10{margin-right:10px;}*/
+/*.first{border-left:none;}*/
+/*.last{border-right:none;}*/
+/*.underline{text-decoration:underline;}*/
+/*.h250{height:250px;}*/

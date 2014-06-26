@@ -2,11 +2,15 @@
 <@indexlayout>
 <script type="text/javascript">
         $(document).ready(function(){
-            $(document).on("mousemove",".columnTab .hd li",function(event){
-                console.debug(this);
+            $(document).on("mousemove",".columnTab .hd li,.columnTab2 .hd li",function(event){
+//                console.debug(this);
                 $(this).addClass("on").siblings().removeClass("on");
                 var i=$(this).index();
-                var blist=$(this).parent().parent().parent().find(".bd div").hide().eq(i).show();
+                var parent=$(this).parents(".columnTab").size()!=0?$(this).parents(".columnTab"):$(this).parents(".columnTab2");
+                console.log(parent.find(".bd div"));
+                var blist=parent.find(".bd div").size()!=0?parent.find(".bd div"):parent.find(".bd ul");
+                console.log(blist);
+                blist.hide().eq(i).show();
             });
         });
 </script>
@@ -72,10 +76,69 @@
 <div class="section" style="padding-left: 20px;">
     <img src="${CONTEXT_PATH}/img/peopleim_ad_banner01.gif" width="100%">
 </div>
+
 <div class="section">
     <div class="main-left">
-        <@topic/>
+        <div class="column-1 h250">
+            <h3><a href="javascript:;" target="_blank">铂金</a> <a href="javascript:;" target="_blank">钯金</a></h3>
+            <div class="columnTab2">
+                <div class="hd">
+                    <ul><li class="on"><h4><a href="javascript:;" target="_blank">铂金</a></h4><span>◆</span></li>
+                        <li><h4><a href="javascript:;" target="_blank">钯金</a></h4><span>◆</span></li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul class="list30" style="display: block;">
 
+                        <li>
+                            <a href="javascript:;" target="_blank" title="铂金矿工周三重返岗位 铂金价格或下跌">铂金矿工周三重返岗位 铂金价格或下跌</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月23日今日最新铂金回收价格查询">6月23日今日最新铂金回收价格查询</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今日铂金回收多少钱一克（6月23日）">今日铂金回收多少钱一克（6月23日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="现在铂金多少钱一克（6月23日）">现在铂金多少钱一克（6月23日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今天铂金价格最新查询（6月23日）">今天铂金价格最新查询（6月23日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今日铂金回收多少钱一克（6月20日）">今日铂金回收多少钱一克（6月20日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月20日今日最新铂金回收价格查询">6月20日今日最新铂金回收价格查询</a>
+                        </li>
+                    </ul>
+                    <ul class="list30" style="display: none;">
+
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月23日现在钯金回收价格多少钱一克">6月23日现在钯金回收价格多少钱一克</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今日钯金回收价格查询（6月23日）">今日钯金回收价格查询（6月23日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今日钯金多少钱一克（6月23日）">今日钯金多少钱一克（6月23日）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月23日今日钯金价格最新查询">6月23日今日钯金价格最新查询</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月20日今日钯金价格最新查询">6月20日今日钯金价格最新查询</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="6月20日今日钯金多少钱一克">6月20日今日钯金多少钱一克</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" target="_blank" title="今日钯金回收价格查询（6月19日）">今日钯金回收价格查询（6月19日）</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="main-right">
         <#if listgroup??>
