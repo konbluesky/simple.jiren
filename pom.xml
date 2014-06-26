@@ -19,11 +19,6 @@
           <artifactId>jfinal</artifactId>
           <version>1.8</version>
       </dependency>
-      <!--<dependency>-->
-          <!--<groupId>com.jfinal</groupId>-->
-          <!--<artifactId>jfinal-ext</artifactId>-->
-          <!--<version>3.1.0</version>-->
-      <!--</dependency>-->
       <dependency>
           <groupId>freemarker</groupId>
           <artifactId>freemarker</artifactId>
@@ -55,11 +50,21 @@
           <artifactId>log4j</artifactId>
           <version>1.2.9</version>
       </dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>14.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>com.jfinal</groupId>
+          <artifactId>jfinal-ext</artifactId>
+          <version>3.1.1-SNAPSHOT</version>
+      </dependency>
   </dependencies>
   <build>
       <finalName>jiren</finalName>
       <sourceDirectory>src/main/java</sourceDirectory>
-      <outputDirectory>target/classes</outputDirectory>
+      <outputDirectory>target/jiren/WEB-INF/classes</outputDirectory>
       <!--<resources>-->
           <!--&lt;!&ndash;打包源代码&ndash;&gt;-->
           <!--<resource>-->
@@ -69,6 +74,7 @@
               <!--</excludes>-->
           <!--</resource>-->
       <!--</resources>-->
+
       <plugins>
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
