@@ -1,4 +1,4 @@
-site.index.meta.title="中国人人投资网(人投网),现货,股票,基金,期货,黄金,白银,在线P2P投资,在线P2P理财";
-site.index.meta.keywords="人人投资网,在线办理各类理财产品,黄金,白银,P2P理财,交易所鉴别,法律援助";
-site.index.meta.description="一站式金融服务体系,回报投资者,让大家学理财,人人能投资,用互联网的态度来做金融";
+site.index.meta.title=中国人人投资网(人投网),现货,股票,基金,期货,黄金,白银,在线P2P投资,在线P2P理财;
+site.index.meta.keywords=人人投资网,在线办理各类理财产品,黄金,白银,P2P理财,交易所鉴别,法律援助;
+site.index.meta.description=一站式金融服务体系,回报投资者,让大家学理财,人人能投资,用互联网的态度来做金融;
 

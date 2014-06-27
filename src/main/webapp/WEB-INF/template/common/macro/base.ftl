@@ -104,8 +104,8 @@ currActive 当前活动tab
             <li><a href="javascript:;" target="_blank">新华银</a></li>
             <li><a href="javascript:;" target="_blank">中玺银</a></li>
             <li><a href="javascript:;" target="_blank">财经日历</a></li>
-            <li><a href="${CONTEXT_PATH}/kaihu" target="_blank">开户指南</a></li>
-            <li><a href="javascript:;" target="_blank">投诉反馈</a></li>
+            <li><a href="${CONTEXT_PATH}/kaihu" target="_self">开户指南</a></li>
+            <#--<li><a href="javascript:;" target="_blank">投诉反馈</a></li>-->
         </ul>
     </div>
     <div class="quote-nav">
@@ -208,7 +208,7 @@ currActive 当前活动tab
 </#macro>
 
 
-<#macro columntab tabs=['国际黄金','国际白银','现货黄金','现货白银'] tab_index=0 listgroup={}>
+<#macro columntab tabs=['白银'] tab_index=0 listgroup={}>
 
 <div class="columnTab">
     <div class="hd">

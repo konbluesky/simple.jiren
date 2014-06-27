@@ -38,7 +38,7 @@
         <h1>${news.newstitle}</h1>
         <div></div>
         <div class="d-article-info">
-            <span>2013-01-01 00:00:11</span>
+            <span>${news.createdate}</span>
             <span>来源:${news.source}</span>
             <span>编辑:${news.editor}</span>
         </div>
