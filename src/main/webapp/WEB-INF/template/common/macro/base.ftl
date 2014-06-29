@@ -69,8 +69,8 @@
     <#--<li><a onclick="loginOutByIndex();"><b>登出</b></a></li>-->
     <#--</ul>-->
     <#--</li>-->
-        <li class="topmenu-pop"><a class="on" href="javascript:;" target="_blank">产品服务中心</a></li>
-        <li class="topmenu-pop"><span class="tel bold red">咨询热线：000-000-0000</span></li>
+        <li class="topmenu-pop"><a class="on" href="javascript:;" target="_blank">产品服务中心 咨询QQ：181997883</a></li>
+        <#--<li class="topmenu-pop"><span class="tel bold red">咨询QQ：181997883</span></li>-->
     </ul>
 </div>
 </#macro>
@@ -80,7 +80,7 @@
 <#macro head>
 <div style="width: 100%">
     <div class="logo">
-        <img src="${CONTEXT_PATH}/img/logo.png" width="100%">
+        <a href="${CONTEXT_PATH}/"><img src="${CONTEXT_PATH}/img/logo.png" width="100%"></a>
     </div>
     <div class="banner">
         <a href="http://wpa.qq.com/msgrd?v=3&uin=181997883&site=qq&menu=yes"><img src="${CONTEXT_PATH}/img/head_banner.gif"  width="100%"></a>
@@ -101,15 +101,15 @@ currActive 当前活动tab
             <li class="kx"><a href="${CONTEXT_PATH}/zxdata" target="_blank"><cite></cite>24小时快讯</a></li>
             <li><a href="javascript:;" target="_blank">金银分析</a></li>
             <li><a href="javascript:;" target="_blank">投资学院</a></li>
-            <li><a href="javascript:;" target="_blank">新华银</a></li>
-            <li><a href="javascript:;" target="_blank">中玺银</a></li>
+            <li><a href="${CONTEXT_PATH}/p/xhy" target="_blank">新华银</a></li>
+            <li><a href="${CONTEXT_PATH}/p/zzx" target="_blank">中玺银</a></li>
             <li><a href="javascript:;" target="_blank">财经日历</a></li>
             <li><a href="${CONTEXT_PATH}/kaihu" target="_self">开户指南</a></li>
             <#--<li><a href="javascript:;" target="_blank">投诉反馈</a></li>-->
         </ul>
     </div>
     <div class="quote-nav">
-        敬请期待,人投网将于2014年06月24号上线
+        &nbsp;
     </div>
 </div>
 </#macro>

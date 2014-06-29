@@ -25,6 +25,8 @@ public class NewsControl extends AbstractSiteControl {
 //        面包屑
         setModule(new BreadcrumbModule(this.getRequest(),"首页","财经资讯"));
         setModule(new ListLeftModule((this.getRequest())));
+        setModule(new OperaModule(this.getRequest()));
+
         Page<News> lists = News.dao.paginate(pagenum, Constant.PAGE_SIZE_NEWS,"select * "," from news_normal order by pdate desc");
         setAttr("newslist", lists);
         execute();
@@ -62,6 +64,7 @@ public class NewsControl extends AbstractSiteControl {
         //@todo 面包屑模块需修正
         setModule(new BreadcrumbModule(this.getRequest(), "首页", NewsTypeKit.getCodemap().get(type)));
         setModule(new ListLeftModule((this.getRequest())));
+        setModule(new OperaModule(this.getRequest()));
 
         setAttr("newslist", lists);
         setAttr("ntype",type);
