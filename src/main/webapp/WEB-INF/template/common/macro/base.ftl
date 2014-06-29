@@ -169,47 +169,19 @@ currActive 当前活动tab
 <#macro topic>
 <div class="topic color-white">
     <span class="title">
-        <h3>今日要闻</h3>
+        <h3>今日走势</h3>
     </span>
-    <p style="padding-left: 10px;">
-        <a href="javascript:;" target="_blank"
-           title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末
-        </a>
-    </p>
     <p style="padding-left: 10px;">
         <a href="javascript:;" target="_blank" title="黄金T+D继续锁死好过周末">黄金T+D继续锁死好过周末</a>
     </p>
     <ul class="list24">
-        <li>
-            <a href="javascript:;" target="_blank" title="国际黄金价格行情难守 上冲回落概率大">国际黄金价格行情难守
-                上冲回落概率大</a>
-            <a target="_blank" href="javascript:;">关注分界点</a>
-        </li>
-        <li>
-            <a href="javascript:;" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
-                黄金价格谨防被诱空</a>
-            <a target="_blank" href="javascript:;">不要被迷惑</a>
-        </li>
-        <li>
-            <a href="javascript:;" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
-            <a target="_blank" href="javascript:;">今日行情分析</a>
-        </li>
-        <li>
-            <a href="javascript:;" target="_blank" title="暗埋地雷或将引爆 黄金价格谨防被诱空">暗埋地雷或将引爆
-                黄金价格谨防被诱空</a>
-            <a target="_blank" href="javascript:;">不要被迷惑</a>
-        </li>
-        <li>
-            <a href="javascript:;" target="_blank" title="金投网：6月6日纸黄金价格交易提醒">金投网：6月6日纸黄金价格交易提醒</a>
-            <a target="_blank" href="javascript:;">今日行情分析</a>
-        </li>
+        <img src="http://www.kitco.cn/cn/metals/silver/t24_ag_cny_gram_450x275g.gif"/>
     </ul>
 </div>
 </#macro>
 
 
 <#macro columntab tabs=['白银'] tab_index=0 listgroup={}>
-
 <div class="columnTab">
     <div class="hd">
         <ul>
@@ -240,7 +212,7 @@ currActive 当前活动tab
 </#macro>
 
 
-
+<#--页脚-->
 <#macro footer>
 <div class="foot">
     <div class="social">
@@ -336,8 +308,7 @@ currActive 当前活动tab
 <meta name="author" content="人投网">
 </#macro>
 
-
-
+<#--css js-->
 <#macro basehead>
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="${CONTEXT_PATH}/css/base.css" />

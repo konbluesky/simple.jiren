@@ -3,20 +3,35 @@
 <script type="text/javascript">
         $(document).ready(function(){
             $(document).on("mousemove",".columnTab .hd li,.columnTab2 .hd li",function(event){
-//                console.debug(this);
                 $(this).addClass("on").siblings().removeClass("on");
                 var i=$(this).index();
                 var parent=$(this).parents(".columnTab").size()!=0?$(this).parents(".columnTab"):$(this).parents(".columnTab2");
-                console.log(parent.find(".bd div"));
                 var blist=parent.find(".bd div").size()!=0?parent.find(".bd div"):parent.find(".bd ul");
-                console.log(blist);
                 blist.hide().eq(i).show();
             });
         });
 </script>
 <div class="section">
     <div class="main-left">
-        <@topic/>
+        <div class="column-1 h250">
+            <h3><a href="javascript:;" target="_blank">今日走势</a></h3>
+            <div class="columnTab2">
+                <div class="hd">
+                    <ul>
+                        <li class="on"><h4><a href="javascript:;" target="_blank">黄金</a></h4><span>◆</span></li>
+                        <li><h4><a href="javascript:;" target="_blank">白银</a></h4><span>◆</span></li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <div class="list30" style="display: block;">
+                        <img src="http://www.kitco.cn/cn/metals/gold/t24_au_usoz_450x275.gif"/>
+                    </div>
+                    <div class="list30" style="display: none;">
+                        <img src="http://www.kitco.cn/cn/metals/silver/t24_ag_usoz_450x275.gif"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="main-right">
         <#if columntb1??>

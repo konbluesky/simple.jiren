@@ -9,6 +9,7 @@ import com.jiren.base.kit.UrlKit;
 import com.jiren.biz.model.news.News;
 import com.jiren.module.breadcrumb.BreadcrumbModule;
 import com.jiren.module.news.ListLeftModule;
+import com.jiren.module.opera.OperaModule;
 
 import java.util.List;
 
@@ -37,7 +38,9 @@ public class NewsControl extends AbstractSiteControl {
         String ndate=getPara(1);
         String nid=getPara(2);
         News news=News.dao.findById(nid);
+
         setModule(new BreadcrumbModule(this.getRequest(),news));
+        setModule(new OperaModule(this.getRequest()));
         setAttr("nnews", news);
         execute();
         renderFreeMarker(PathBizKit.getPagePath()+"/news/detail.ftl");
