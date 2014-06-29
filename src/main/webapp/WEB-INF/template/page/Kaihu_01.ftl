@@ -92,7 +92,7 @@
     <div class="control-group" style="text-align: center;">
         <label class="control-label">&nbsp;</label>
         <div class="controls">
-            <button type="submit" style="width:220px;" class="btn btn-primary btn-block">确定${aaa??}</button>
+            <button type="submit" style="width:220px;" class="btn btn-primary btn-block">确定</button>
         </div>
     </div>
 </form>

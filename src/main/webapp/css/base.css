@@ -106,7 +106,7 @@ a {
     text-align: center;
 }
 .main{
-    width: 1000px;
+    width: 998px;
     margin: 0px auto;
     overflow: hidden;
     border-left:  1px solid #F0F0F0;
@@ -155,7 +155,7 @@ a {
 }
 /*border*1 + margin*10*/
 .main-right {
-    width: 689px;
+    width: 687px;
     float: right;
     overflow: hidden;
 }
@@ -268,52 +268,12 @@ a {
 }
 
 
-.columnTab {
-    width: 100%;
-    height: 248px;
-    border-top: 2px solid #417999;
-    overflow: hidden;
-}
-.columnTab .hd {
-    height: 28px;
-    position: relative;
-    overflow: hidden;
-}
-.columnTab .hd ul {
-    float: left;
-    width: 688px;
-    border-left: 1px solid #DDDDDD;
-    background: #FAFAFA;
-    position: absolute;
-    height: 28px;
-}
-.columnTab .hd li {
-    float: left;
-    width: 171px;
-    height: 27px;
-    line-height: 27px;
-    border-right: 1px solid #DDDDDD;
-    border-bottom: 1px solid #F0F0F0;
-    text-align: center;
-    cursor: pointer;
-}
-.columnTab .hd li.on {
-    background: #fff;
-    border-bottom: 1px solid #fff;
-}
 .columnTab h3, .column-box h4 {
     font-size: 14px;
     font-family: "Microsoft Yahei";
     line-height: 30px;
 }
 
-.columnTab .list30 li {
-    height: 30px;
-    line-height: 30px;
-    background: url(../img/peopleim_sprite.png) -650px -74px no-repeat;
-    text-indent: 20px;
-    overflow: hidden;
-}
 .columnTab .row2 li {
     width: 50%;
     float: left;
