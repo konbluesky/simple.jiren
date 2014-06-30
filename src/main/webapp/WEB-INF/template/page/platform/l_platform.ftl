@@ -36,6 +36,9 @@
     }
 </script>
 <@indexlayout>
+<#if breadcrumbView??>
+    <@breadcrumb breadcrumbView/>
+</#if>
 <div class="platform-left" style="height:300px;">
     <div class="well">
     <ul class="nav nav-list">

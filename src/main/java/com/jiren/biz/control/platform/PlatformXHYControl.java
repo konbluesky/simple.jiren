@@ -11,6 +11,7 @@ package com.jiren.biz.control.platform;
 
 import com.jiren.base.control.AbstractSiteControl;
 import com.jiren.base.kit.PathBizKit;
+import com.jiren.module.breadcrumb.BreadcrumbModule;
 
 /**
  * Created by konbluesky
@@ -19,6 +20,8 @@ import com.jiren.base.kit.PathBizKit;
  */
 public class PlatformXHYControl extends AbstractSiteControl {
     public void index(){
+        setModule(new BreadcrumbModule(this.getRequest(),"首页","交易所","新华银"));
+        execute();
         renderFreeMarker(PathBizKit.getPagePath()+"/platform/l_platform.ftl");
     }
 }

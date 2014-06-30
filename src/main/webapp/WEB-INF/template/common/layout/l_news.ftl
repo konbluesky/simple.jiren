@@ -71,21 +71,11 @@
 
 <#macro detail_right>
 <div class="d-main-right">
-    <div class="comm t-line" id="docreport">
-        <div class="vip-jp">
-            <h3>
-                <span>
-                    <a href="javascript:;" title="最新解盘" target="_blank">最新解盘&gt;&gt;</a>
-                </span>
-                <a href="javascript:;" title="VIP实盘在线解盘" target="_blank">VIP实盘在线解盘</a>
-            </h3>
-            <div>
-                <@opera operaView/>
-            </div>
-        </div>
+    <div class="comm" id="docreport">
+        <@opera operaView/>
     </div>
 
-    <div class="comm t-line">
+    <div class="comm">
         <img src="${CONTEXT_PATH}/img/ad-right-01.gif">
     </div>
 
@@ -117,15 +107,25 @@
 </#macro>
 
 
-<#--新闻类别列表-->
+<#--操作建议列表-->
 <#macro opera operaView>
-<ul>
-    <#if operaView??>
-        <#list operaView as o>
-            <li><span>${o.createtime}---- </span>
-                ${o.opera}
-            </li>
-        </#list>
-    </#if>
-</ul>
+<div class="vip-jp  t-line">
+    <h3>
+                <span>
+                    <a href="javascript:;" title="最新解盘" target="_blank">最新解盘&gt;&gt;</a>
+                </span>
+        <a href="javascript:;" title="VIP实盘在线解盘" target="_blank">VIP实盘在线解盘</a>
+    </h3>
+    <div>
+        <ul>
+            <#if operaView??>
+                <#list operaView as o>
+                    <li><span>${o.createtime}---- </span>
+                    ${o.opera}
+                    </li>
+                </#list>
+            </#if>
+        </ul>
+    </div>
+</div>
 </#macro>

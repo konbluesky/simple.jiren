@@ -441,7 +441,7 @@ a {
 
 /*在线解盘*/
 .comm {
-    padding: 6px 0;
+    padding: 0px 0;
     border-left: solid #f0f0f0;
     border-width: 1px 1px 0;
     overflow: hidden;

@@ -1,4 +1,5 @@
 <#include "/WEB-INF/template/common/layout/l_index.ftl"/>
+<#include "/WEB-INF/template/common/layout/l_news.ftl"/>
 <@indexlayout>
 <script type="text/javascript">
         $(document).ready(function(){
@@ -162,7 +163,7 @@
     </div>
     <div class="section">
         <div class="main-left">
-            <@topic/>
+            <@opera operaView/>
         </div>
         <div class="main-right">
             <iframe height="248"

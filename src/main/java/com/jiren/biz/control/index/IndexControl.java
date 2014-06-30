@@ -9,6 +9,7 @@ import com.jiren.module.core.IModule;
 import com.jiren.module.core.ModuleException;
 import com.jiren.module.meta.MetaModule;
 import com.jiren.module.news.ColumnTabModule;
+import com.jiren.module.opera.OperaModule;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public class IndexControl extends AbstractSiteControl {
         setModule(new ColumnTabModule(this.getRequest(),"columntb2","qh","jj","zj","gp"));
         setModule(new ColumnTabModule(this.getRequest(),"columntb3","qz"));
         setModule(new BreadcrumbModule(this.getRequest(),null));
+        setModule(new OperaModule(this.getRequest()));
         execute();
         renderFreeMarker("/index.html");
     }
