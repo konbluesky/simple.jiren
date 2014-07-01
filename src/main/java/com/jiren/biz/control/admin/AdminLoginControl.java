@@ -7,28 +7,23 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.module.opera;
+package com.jiren.biz.control.admin;
 
-import com.jiren.biz.model.OperaAdvise;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.ModuleException;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import com.jiren.base.control.AbstractSiteControl;
+import com.jiren.base.kit.PathBizKit;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午12:45
+ * Date : 14-6-30 下午2:48
  * Project : simple.jiren
  */
-public class OperaModule extends BaseModule {
-    public OperaModule(HttpServletRequest req){
-        super(req);
+public class AdminLoginControl extends AbstractSiteControl {
+
+    public void index(){
+        renderFreeMarker(PathBizKit.getPagePath()+"/admin/index.ftl");
     }
 
-    @Override
-    public void execute() throws ModuleException {
-        List<OperaAdvise> list=OperaAdvise.dao.find("select * from opera_advise order by createtime desc limit 0,3");
-        getRequest().setAttribute("operaView",list);
+    public void login(){
+        renderFreeMarker(PathBizKit.getPagePath()+"/admin/login.ftl");
     }
 }

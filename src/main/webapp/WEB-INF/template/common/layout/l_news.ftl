@@ -91,7 +91,7 @@
             <dl class="type-groups">
             <dt>财经资讯</dt>
             <#list typesView as t>
-                <#if (t_index > 2)>
+                <#if (t_index > 1)>
                     <dd>
                         <#if t.value==currType>
                             <@basehref url="n/1"+t.value atext=t.name class="active" target="_self"/>

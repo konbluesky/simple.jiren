@@ -219,12 +219,16 @@ currActive 当前活动tab
         <ul>
             <li>
                 <h3>微信二维码</h3>
-                <img src="${CONTEXT_PATH}/img/peopleim_img_qrcode.png" alt="微信二维码">
+                <img src="${CONTEXT_PATH}/img/xinlang_qrcode.png" alt="微信二维码">
+            </li>
+            <li>
+                <h3>微信二维码</h3>
+                <img src="${CONTEXT_PATH}/img/xinlang_qrcode.png" alt="微信二维码">
             </li>
             <li>
                 <h3>关于我们</h3>
 
-                <p class="weibo"><a href="javascript:;" target="_blank">新浪微博</a></p>
+                <p class="weibo"><a href="http://weibo.com/u/5182938622" target="_blank">新浪微博</a></p>
 
                 <p class="txwb"><a href="javascript:;" target="_blank">腾讯微博</a></p>
 
