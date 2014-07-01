@@ -14,11 +14,11 @@ import com.jfinal.log.Logger;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午12:27
+ * Date : 14-7-1 下午1:09
  * Project : simple.jiren
  */
-@TableBind(tableName="opera_advise")
-public class OperaAdvise extends BaseModel<OperaAdvise>{
-    private static Logger log = Logger.getLogger(OperaAdvise.class);
-    public static OperaAdvise dao=new OperaAdvise();
+@TableBind(tableName="sys_menu")
+public class SystemMenu extends BaseModel<SystemMenu> {
+    private static Logger log = Logger.getLogger(SystemMenu.class);
+    public static SystemMenu dao=new SystemMenu();
 }

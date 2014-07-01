@@ -1,13 +1,15 @@
 package com.jiren.biz.model.news;
 
-import com.jfinal.plugin.activerecord.Model;
+import com.jfinal.log.Logger;
+import com.jiren.biz.model.BaseModel;
 
 import java.util.List;
 
 /**
  * Created by konbluesky on 14-6-23.
  */
-public class NewsType extends Model<NewsType> {
+public class NewsType extends BaseModel<NewsType> {
+    private static Logger log = Logger.getLogger(NewsType.class);
     public final static NewsType dao=new NewsType();
 
     /**
