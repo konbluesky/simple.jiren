@@ -14,4 +14,7 @@ public class PathBizKit extends PathKit {
     public static String getPagePath(){
         return "/WEB-INF/template/page";
     }
+    public static String getPageAdminPath(){
+        return "/WEB-INF/template/page/admin";
+    }
 }

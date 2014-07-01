@@ -10,6 +10,14 @@
 package com.jiren.biz.control.admin.news;
 
 import com.jiren.base.control.AbstractSiteControl;
+import com.jiren.base.kit.PathBizKit;
+import com.jiren.base.kit.tree.TreeNode;
+import com.jiren.base.kit.tree.TreeNodeBuilder;
+import com.jiren.biz.model.news.NewsType;
+import com.jiren.biz.model.system.SystemMenu;
+import com.jiren.module.admin.LeftMenuModule;
+
+import java.util.List;
 
 /**
  * Created by konbluesky
@@ -17,5 +25,17 @@ import com.jiren.base.control.AbstractSiteControl;
  * Project : simple.jiren
  */
 public class NewsManagerControl extends AbstractSiteControl {
+    public void index(){
+//        System.out.println(NewsType.dao.getChilds("2"));
+//        System.out.println(SystemMenu.dao.getChilds("2"));
+        setModule(new LeftMenuModule(this.getRequest()));
+        execute();
+        renderFreeMarker(PathBizKit.getPageAdminPath() + "/index.ftl");
+    }
+    public void tree(){
+        setModule(new LeftMenuModule(this.getRequest()));
+        execute();
+        renderJson();
+    }
 
 }

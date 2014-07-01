@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * site页的面包屑
  * Created by konbluesky on 14-6-23.
  */
 public class BreadcrumbModule extends BaseModule{

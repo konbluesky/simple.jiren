@@ -12,9 +12,9 @@ import java.util.List;
  */
 public class NewsRouteHandler extends Handler {
 
-    private final static String REX_DETAIL="/n/(\\d{4}-\\d{2}-\\d{2})/(\\w+)\\.(\\w+)";
-    private final static String REX_TYPELIST="/n/([a-z]+)";
-    private final static String REX_NORMALLIST_PAGE="/n/(\\d+)";
+    private final static String REX_DETAIL="^/n/(\\d{4}-\\d{2}-\\d{2})/(\\w+)\\.(\\w+)";
+    private final static String REX_TYPELIST="^/n/([a-z]+)";
+    private final static String REX_NORMALLIST_PAGE="^/n/(\\d+)";
 
     private static List<IRouteCondition> routes=new ArrayList<IRouteCondition>();
 
