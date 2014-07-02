@@ -20,13 +20,14 @@ import java.util.List;
  * Date : 14-7-1 下午4:20
  * Project : simple.jiren
  */
-public class TreeNodeBuilder {
+public class NewsTypeTreeBuilder implements ITreeBuilder<NewsType> {
     /**
      * 根据该用户可访问的资源生成树
      * @param resources 资源列表(原始数据)
      * @return
      */
-    public List<TreeNode<NewsType>> buildTree(List<NewsType> resources) {
+    @Override
+    public List<TreeNode<NewsType>> builderTree(List<NewsType> resources) {
         List<TreeNode<NewsType>> roots = new ArrayList<TreeNode<NewsType>>();
         TreeNode<NewsType> root = new TreeNode<NewsType>();
         for (NewsType resource:resources) {
@@ -58,4 +59,5 @@ public class TreeNodeBuilder {
             }
         }
     }
+
 }

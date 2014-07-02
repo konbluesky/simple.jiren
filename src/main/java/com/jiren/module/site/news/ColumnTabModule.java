@@ -7,12 +7,12 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.module.news;
+package com.jiren.module.site.news;
 
 import com.jfinal.plugin.activerecord.Page;
 import com.jiren.biz.model.news.News;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.ModuleException;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

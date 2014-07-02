@@ -11,6 +11,7 @@ package com.jiren.biz.model.system;
 
 import com.jfinal.ext.plugin.tablebind.TableBind;
 import com.jfinal.log.Logger;
+import com.jiren.base.kit.tree.ITreeRecursion;
 import com.jiren.biz.model.BaseModel;
 
 import java.util.List;
@@ -21,16 +22,15 @@ import java.util.List;
  * Project : simple.jiren
  */
 @TableBind(tableName="sys_menu")
-public class SystemMenu extends BaseModel<SystemMenu> {
+public class SystemMenu extends BaseModel<SystemMenu> implements ITreeRecursion {
     private static Logger log = Logger.getLogger(SystemMenu.class);
     public static SystemMenu dao=new SystemMenu();
 
-    public int getParentCode(){
-        return this.getInt("parentcode");
+    public SystemMenu(){};
+    public SystemMenu(SystemMenu e){
+        this.setAttrs(e);
     }
-    public int getCode(){
-        return this.getInt("code");
-    }
+
 
     /**
      * getNTChilds
@@ -54,4 +54,19 @@ public class SystemMenu extends BaseModel<SystemMenu> {
         return list;
     }
 
+
+    @Override
+    public int getParentCode() {
+        return this.getInt("parentcode");
+    }
+
+    @Override
+    public int getCode() {
+        return this.getInt("code");
+    }
+
+    @Override
+    public ITreeRecursion getNewThis() {
+        return new SystemMenu(this);
+    }
 }

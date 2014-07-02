@@ -1,9 +1,9 @@
-package com.jiren.module.breadcrumb;
+package com.jiren.module.site.breadcrumb;
 
 import com.jiren.biz.model.news.News;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.ModuleException;
-import com.jiren.module.html.link.HrefObject;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
+import com.jiren.module.site.link.HrefObject;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.jiren.module.meta;
+package com.jiren.module.site.meta;
 
 /**
  * Created by konbluesky on 14-6-24.

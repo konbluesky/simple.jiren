@@ -3,8 +3,8 @@ package com.jiren.biz.control;
 
 import com.jiren.base.control.AbstractSiteControl;
 import com.jiren.base.kit.PathBizKit;
-import com.jiren.module.breadcrumb.BreadcrumbModule;
-import com.jiren.module.opera.OperaModule;
+import com.jiren.module.site.breadcrumb.BreadcrumbModule;
+import com.jiren.module.site.opera.OperaModule;
 
 /**
  * Created by konbluesky on 14-6-17.

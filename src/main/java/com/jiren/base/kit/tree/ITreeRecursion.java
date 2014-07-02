@@ -7,23 +7,29 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.biz.control.admin;
-
-import com.jiren.base.control.AbstractSiteControl;
-import com.jiren.base.kit.PathBizKit;
+package com.jiren.base.kit.tree;
 
 /**
+ * 构建树时用的递归接口
  * Created by konbluesky
- * Date : 14-6-30 下午2:48
+ * Date : 14-7-2 下午2:15
  * Project : simple.jiren
  */
-public class AdminLoginControl extends AbstractSiteControl {
+public interface ITreeRecursion {
+    /**
+     * 获得父节点编码
+     * @return
+     */
+    public int getParentCode();
+    /**
+     * 获得当前节点编码
+     * @return
+     */
+    public int getCode();
 
-    public void index(){
-        renderFreeMarker(PathBizKit.getPagePath()+"/admin/index.ftl");
-    }
-
-    public void login(){
-        renderFreeMarker(PathBizKit.getPagePath()+"/admin/login.ftl");
-    }
+    /**
+     * 获取当前实例(需要重新new)
+     * @return
+     */
+    public ITreeRecursion getNewThis();
 }

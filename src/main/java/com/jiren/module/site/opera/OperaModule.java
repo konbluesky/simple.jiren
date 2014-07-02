@@ -7,21 +7,28 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.biz.control.platform;
+package com.jiren.module.site.opera;
 
-import com.jiren.base.control.AbstractSiteControl;
-import com.jiren.base.kit.PathBizKit;
-import com.jiren.module.site.breadcrumb.BreadcrumbModule;
+import com.jiren.biz.model.OperaAdvise;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午2:21
+ * Date : 14-6-29 下午12:45
  * Project : simple.jiren
  */
-public class PlatformXHYControl extends AbstractSiteControl {
-    public void index(){
-        setModule(new BreadcrumbModule(this.getRequest(),"首页","交易所","新华银"));
-        execute();
-        renderFreeMarker(PathBizKit.getPagePath()+"/platform/l_platform.ftl");
+public class OperaModule extends BaseModule {
+    public OperaModule(HttpServletRequest req){
+        super(req);
+    }
+
+    @Override
+    public void execute() throws ModuleException {
+        List<OperaAdvise> list=OperaAdvise.dao.find("select * from opera_advise order by createtime desc limit 0,3");
+        getRequest().setAttribute("operaView",list);
     }
 }

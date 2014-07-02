@@ -7,21 +7,23 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.biz.control.platform;
+package com.jiren.biz.control.manager;
 
 import com.jiren.base.control.AbstractSiteControl;
 import com.jiren.base.kit.PathBizKit;
-import com.jiren.module.site.breadcrumb.BreadcrumbModule;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午2:21
+ * Date : 14-6-30 下午2:48
  * Project : simple.jiren
  */
-public class PlatformXHYControl extends AbstractSiteControl {
+public class AdminLoginControl extends AbstractSiteControl {
+
     public void index(){
-        setModule(new BreadcrumbModule(this.getRequest(),"首页","交易所","新华银"));
-        execute();
-        renderFreeMarker(PathBizKit.getPagePath()+"/platform/l_platform.ftl");
+        renderFreeMarker(PathBizKit.getPagePath()+"/admin/index.ftl");
+    }
+
+    public void login(){
+        renderFreeMarker(PathBizKit.getPagePath()+"/admin/login.ftl");
     }
 }

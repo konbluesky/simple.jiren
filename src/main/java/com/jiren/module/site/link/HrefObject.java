@@ -1,4 +1,4 @@
-package com.jiren.module.html.link;
+package com.jiren.module.site.link;
 
 /**
  * Created by konbluesky on 14-6-17.

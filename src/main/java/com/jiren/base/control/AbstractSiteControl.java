@@ -3,8 +3,8 @@ package com.jiren.base.control;
 import com.jfinal.core.Controller;
 import com.jfinal.log.Log4jLoggerFactory;
 import com.jfinal.log.Logger;
-import com.jiren.module.core.IModule;
-import com.jiren.module.core.ModuleException;
+import com.jiren.module.site.core.IModule;
+import com.jiren.module.site.core.ModuleException;
 
 import java.util.ArrayList;
 import java.util.List;

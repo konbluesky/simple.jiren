@@ -1,4 +1,4 @@
-package com.jiren.module.core;
+package com.jiren.module.site.core;
 
 
 /**

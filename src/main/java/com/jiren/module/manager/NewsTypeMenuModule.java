@@ -7,21 +7,26 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.biz.control.platform;
+package com.jiren.module.manager;
 
-import com.jiren.base.control.AbstractSiteControl;
-import com.jiren.base.kit.PathBizKit;
-import com.jiren.module.site.breadcrumb.BreadcrumbModule;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午2:21
+ * Date : 14-7-2 下午3:22
  * Project : simple.jiren
  */
-public class PlatformXHYControl extends AbstractSiteControl {
-    public void index(){
-        setModule(new BreadcrumbModule(this.getRequest(),"首页","交易所","新华银"));
-        execute();
-        renderFreeMarker(PathBizKit.getPagePath()+"/platform/l_platform.ftl");
+public class NewsTypeMenuModule extends BaseModule {
+
+    public NewsTypeMenuModule(HttpServletRequest req) {
+        super(req);
+    }
+
+    @Override
+    public void execute() throws ModuleException {
+
     }
 }

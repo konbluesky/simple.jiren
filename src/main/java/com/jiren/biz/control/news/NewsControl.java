@@ -7,11 +7,9 @@ import com.jiren.base.kit.NewsTypeKit;
 import com.jiren.base.kit.PathBizKit;
 import com.jiren.base.kit.UrlKit;
 import com.jiren.biz.model.news.News;
-import com.jiren.module.breadcrumb.BreadcrumbModule;
-import com.jiren.module.news.ListLeftModule;
-import com.jiren.module.opera.OperaModule;
-
-import java.util.List;
+import com.jiren.module.site.breadcrumb.BreadcrumbModule;
+import com.jiren.module.site.news.SiteNewsListLeftModule;
+import com.jiren.module.site.opera.OperaModule;
 
 /**
  * Created by konbluesky on 14-6-16.
@@ -24,7 +22,7 @@ public class NewsControl extends AbstractSiteControl {
         int pagenum=getParaToInt(1,1);
 //        面包屑
         setModule(new BreadcrumbModule(this.getRequest(),"首页","财经资讯"));
-        setModule(new ListLeftModule((this.getRequest())));
+        setModule(new SiteNewsListLeftModule((this.getRequest())));
         setModule(new OperaModule(this.getRequest()));
 
         Page<News> lists = News.dao.paginate(pagenum, Constant.PAGE_SIZE_NEWS,"select * "," from news_normal order by pdate desc");
@@ -63,7 +61,7 @@ public class NewsControl extends AbstractSiteControl {
         /*加载其他模块*/
         //@todo 面包屑模块需修正
         setModule(new BreadcrumbModule(this.getRequest(), "首页", NewsTypeKit.getCodemap().get(type)));
-        setModule(new ListLeftModule((this.getRequest())));
+        setModule(new SiteNewsListLeftModule((this.getRequest())));
         setModule(new OperaModule(this.getRequest()));
 
         setAttr("newslist", lists);

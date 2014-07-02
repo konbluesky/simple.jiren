@@ -1,12 +1,10 @@
-package com.jiren.module.meta;
+package com.jiren.module.site.meta;
 
 import com.jfinal.ext.plugin.config.ConfigKit;
 import com.jiren.base.kit.NewsTypeKit;
 import com.jiren.biz.model.news.News;
-import com.jiren.biz.model.news.NewsType;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.IModule;
-import com.jiren.module.core.ModuleException;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;

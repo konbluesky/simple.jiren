@@ -7,28 +7,20 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  ******************************************************************************/
 
-package com.jiren.module.opera;
+package com.jiren.base.kit.tree;
 
-import com.jiren.biz.model.OperaAdvise;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.ModuleException;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
  * Created by konbluesky
- * Date : 14-6-29 下午12:45
+ * Date : 14-7-2 下午2:05
  * Project : simple.jiren
  */
-public class OperaModule extends BaseModule {
-    public OperaModule(HttpServletRequest req){
-        super(req);
-    }
-
-    @Override
-    public void execute() throws ModuleException {
-        List<OperaAdvise> list=OperaAdvise.dao.find("select * from opera_advise order by createtime desc limit 0,3");
-        getRequest().setAttribute("operaView",list);
-    }
+public interface ITreeBuilder<T>{
+    /**
+     * 根据该用户可访问的资源生成树
+     * @param resources 资源列表(原始数据)
+     * @return
+     */
+    public List<TreeNode<T>> builderTree(List<T> resources);
 }

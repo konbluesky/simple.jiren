@@ -1,8 +1,8 @@
-package com.jiren.module.news;
+package com.jiren.module.site.news;
 
 import com.jiren.biz.model.news.NewsType;
-import com.jiren.module.core.BaseModule;
-import com.jiren.module.core.ModuleException;
+import com.jiren.module.site.core.BaseModule;
+import com.jiren.module.site.core.ModuleException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -10,8 +10,8 @@ import java.util.List;
 /**
  * Created by konbluesky on 14-6-23.
  */
-public class ListLeftModule extends BaseModule{
-    public ListLeftModule(HttpServletRequest req){
+public class SiteNewsListLeftModule extends BaseModule{
+    public SiteNewsListLeftModule(HttpServletRequest req){
         super(req);
     }
     @Override
