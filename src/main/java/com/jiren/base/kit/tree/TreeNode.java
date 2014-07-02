@@ -10,7 +10,6 @@
 package com.jiren.base.kit.tree;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,13 +20,15 @@ import java.util.List;
  */
 public class TreeNode<T> {
     private T node;
-    private TreeNode<T> parent;
     private List<TreeNode<T>> childs = new ArrayList<TreeNode<T>>();
     public TreeNode(T node){
         this.node=node;
     }
     public TreeNode() {
         this(null);
+    }
+    public boolean hasChild(){
+        return childs!=null && childs.size()>0;
     }
     /**
      * 添加子节点。
@@ -36,7 +37,6 @@ public class TreeNode<T> {
      */
     public void addChild(TreeNode<T> child) {
         childs.add(child);
-        child.setParent(this);
     }
 
     /**
@@ -56,7 +56,6 @@ public class TreeNode<T> {
     public void removeChildAt(int index) {
         TreeNode<T> child = getChildAt(index);
         childs.remove(index);
-        child.setParent(null);
     }
 
     public TreeNode<T> getChildAt(int index) {
@@ -75,45 +74,8 @@ public class TreeNode<T> {
         return childs;
     }
 
-    public void setParent(TreeNode<T> parent) {
-        this.parent = parent;
-    }
-
-    public TreeNode<T> getParent() {
-        return parent;
-    }
-
-    /**
-     * 是否为根节点。
-     *
-     * @return 是根节点，返回true；否则，返回false。
-     */
-    public boolean isRoot() {
-        return getParent() == null;
-    }
-
     public boolean isLeaf() {
         return getChildCount() == 0;
-    }
-
-    /**
-     * 判断指定的节点是否为当前节点的子节点。
-     *
-     * @param node 节点。
-     * @return 是当前节点的子节点，返回true；否则，返回false。
-     */
-    public boolean isChild(TreeNode<T> node) {
-        boolean result;
-        if (node == null) {
-            result = false;
-        } else {
-            if (getChildCount() == 0) {
-                result = false;
-            } else {
-                result = (node.getParent() == this);
-            }
-        }
-        return result;
     }
 
     public T getNode() {

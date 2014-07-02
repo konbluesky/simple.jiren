@@ -52,7 +52,7 @@ public class TreeNodeBuilder {
         }
         if (root.getChildCount()>0) {
             for (TreeNode<NewsType> branch : root.getChildren()) {
-                if (branch.getParent().equals(root)) {
+                if (branch.getNode().getParentCode()==root.getNode().getCode()) {
                     buildTree(branch, resources);
                 }
             }
