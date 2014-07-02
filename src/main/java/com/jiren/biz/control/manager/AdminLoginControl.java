@@ -21,7 +21,7 @@ import com.jiren.module.manager.SystemMenuModule;
 public class AdminLoginControl extends AbstractSiteControl {
 
     public void index(){
-        setModule(new SystemMenuModule(this.getRequest()));
+        setModule(new SystemMenuModule(this.getRequest(),"nrgl"));
         execute();
         renderFreeMarker(PathBizKit.getPagePath()+"/admin/index.ftl");
     }

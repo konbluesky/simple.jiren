@@ -29,20 +29,20 @@ public class SystemMenuModule extends BaseModule {
     //    根节点
     private final String ROOT = "1";
     private String nid;
+    private String curNode;
     private ITreeBuilder<SystemMenu> builder;
 
     public SystemMenuModule(HttpServletRequest req) {
         super(req);
         this.nid = ROOT;
     }
-
     /**
      * @param req
-     * @param nodeid 根节点 初始为 1
+     * @param curNode 当前节点
      */
-    public SystemMenuModule(HttpServletRequest req, String nodeid) {
-        super(req);
-        this.nid = nodeid;
+    public SystemMenuModule(HttpServletRequest req, String curNode) {
+        this(req);
+        this.curNode = curNode;
     }
 
     @Override
@@ -50,6 +50,7 @@ public class SystemMenuModule extends BaseModule {
         builder = new SystemMenuTreeBuilder();
         List<TreeNode<SystemMenu>> list = builder.builderTree(SystemMenu.dao.getChilds(nid));
         getRequest().setAttribute("leftMenuView", list);
+        getRequest().setAttribute("leftMenuCurNode", curNode);
     }
 
 }

@@ -20,9 +20,7 @@ import com.jiren.module.manager.SystemMenuModule;
  */
 public class NewsManagerControl extends AbstractSiteControl {
     public void index(){
-//        System.out.println(NewsType.dao.getChilds("2"));
-//        System.out.println(SystemMenu.dao.getChilds("2"));
-        setModule(new SystemMenuModule(this.getRequest()));
+        setModule(new SystemMenuModule(this.getRequest(),"nrgl"));
         execute();
         renderFreeMarker(PathBizKit.getPageAdminPath() + "/index.ftl");
     }
