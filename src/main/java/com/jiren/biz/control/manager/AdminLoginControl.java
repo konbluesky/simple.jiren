@@ -11,6 +11,7 @@ package com.jiren.biz.control.manager;
 
 import com.jiren.base.control.AbstractSiteControl;
 import com.jiren.base.kit.PathBizKit;
+import com.jiren.module.manager.SystemMenuModule;
 
 /**
  * Created by konbluesky
@@ -20,6 +21,8 @@ import com.jiren.base.kit.PathBizKit;
 public class AdminLoginControl extends AbstractSiteControl {
 
     public void index(){
+        setModule(new SystemMenuModule(this.getRequest()));
+        execute();
         renderFreeMarker(PathBizKit.getPagePath()+"/admin/index.ftl");
     }
 

@@ -47,7 +47,7 @@ public class SystemMenuTreeBuilder implements ITreeBuilder<SystemMenu> {
             }
         }
         if (root.getChildCount()>0) {
-            for (TreeNode<SystemMenu> branch : root.getChildren()) {
+            for (TreeNode<SystemMenu> branch : root.getChilds()) {
                 if (branch.getNode().getParentCode()==root.getNode().getCode()) {
                     buildTree(branch, resources);
                 }

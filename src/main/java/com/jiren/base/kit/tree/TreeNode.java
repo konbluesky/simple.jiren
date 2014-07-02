@@ -70,10 +70,6 @@ public class TreeNode<T> {
         return childs.indexOf(child);
     }
 
-    public List<TreeNode<T>> getChildren() {
-        return childs;
-    }
-
     public boolean isLeaf() {
         return getChildCount() == 0;
     }
@@ -86,7 +82,11 @@ public class TreeNode<T> {
         this.node = node;
     }
 
-    public String toString(){
-        return "aaa";
+    public List<TreeNode<T>> getChilds() {
+        return childs;
+    }
+
+    public void setChilds(List<TreeNode<T>> childs) {
+        this.childs = childs;
     }
 }

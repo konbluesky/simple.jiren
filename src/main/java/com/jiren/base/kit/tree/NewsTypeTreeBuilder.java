@@ -52,7 +52,7 @@ public class NewsTypeTreeBuilder implements ITreeBuilder<NewsType> {
             }
         }
         if (root.getChildCount()>0) {
-            for (TreeNode<NewsType> branch : root.getChildren()) {
+            for (TreeNode<NewsType> branch : root.getChilds()) {
                 if (branch.getNode().getParentCode()==root.getNode().getCode()) {
                     buildTree(branch, resources);
                 }

@@ -105,139 +105,224 @@
 <div class="page-sidebar navbar-collapse collapse">
     <!-- BEGIN SIDEBAR MENU -->
     <ul class="page-sidebar-menu">
-        <li>
-            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-            <div class="sidebar-toggler hidden-phone"></div>
-            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-        </li>
-        <li>
-            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-            <form class="sidebar-search" action="extra_search.html" method="POST">
-                <div class="form-container">
-                    <div class="input-box">
-                        <a href="javascript:;" class="remove"></a>
-                        <input type="text" placeholder="Search...">
-                        <input type="button" class="submit" value=" ">
-                    </div>
-                </div>
-            </form>
-            <!-- END RESPONSIVE QUICK SEARCH FORM -->
-        </li>
-        <li class="start active ">
-            <a href="index.html">
-                <i class="fa fa-home"></i>
-                <span class="title">Dashboard</span>
-                <span class="selected"></span>
-            </a>
-        </li>
-        <li class="">
-            <a href="javascript:;">
-                <i class="fa fa-cogs"></i>
-                <span class="title">Layouts</span>
-                <span class="arrow "></span>
-            </a>
-            <ul class="sub-menu">
-                <li>
-                    <a href="layout_session_timeout.html">
-                        <span class="badge badge-roundless badge-warning">new</span>Session Timeout</a>
-                </li>
-            </ul>
-        </li>
-        <li class="tooltips" data-placement="right" data-original-title="Frontend&nbsp;Theme For&nbsp;Metronic&nbsp;Admin">
-            <a href="http://keenthemes.com/preview/index.php?theme=metronic_frontend" target="_blank">
-                <i class="fa fa-gift"></i>
-                <span class="title">Frontend Theme</span>
-            </a>
-        </li>
-        <li class="">
-            <a href="javascript:;">
-                <i class="fa fa-bookmark-o"></i>
-                <span class="title">UI Features</span>
-                <span class="arrow "></span>
-            </a>
-            <ul class="sub-menu">
-                <li>
-                    <a href="ui_general.html">
-                        General</a>
-                </li>
-                <li>
-                    <a href="ui_buttons.html">
-                        Buttons &amp; Icons</a>
-                </li>
-            </ul>
-        </li>
-        <li class="">
-            <a href="javascript:;">
-                <i class="fa fa-table"></i>
-                <span class="title">Form Stuff</span>
-                <span class="arrow "></span>
-            </a>
-            <ul class="sub-menu">
-                <li>
-                    <a href="form_controls.html">
-                        Form Controls</a>
-                </li>
-                <li>
-                    <a href="form_layouts.html">
-                        Form Layouts</a>
-                </li>
-            </ul>
-        </li>
-        <li class="">
-            <a href="javascript:;">
-                <i class="fa fa-sitemap"></i>
-                <span class="title">Pages</span>
-                <span class="arrow "></span>
-            </a>
-            <ul class="sub-menu">
-                <li>
-                    <a href="page_portfolio.html">
-                        <i class="fa fa-briefcase"></i>
-                        <span class="badge badge-warning badge-roundless">new</span>Portfolio</a>
-                </li>
-                <li>
-                    <a href="page_timeline.html">
-                        <i class="fa fa-clock-o"></i>
-                        <span class="badge badge-info">4</span>Timeline</a>
-                </li>
-            </ul>
-        </li>
-        <li class="">
-            <a href="javascript:;">
-                <i class="fa fa-user"></i>
-                <span class="title">Login Options</span>
-                <span class="arrow "></span>
-            </a>
-            <ul class="sub-menu">
-                <li>
-                    <a href="login.html">
-                        Login Form 1</a>
-                </li>
-                <li>
-                    <a href="login_soft.html">
-                        Login Form 2</a>
-                </li>
-            </ul>
-        </li>
-        <li class="last ">
-            <a href="charts.html">
-                <i class="fa fa-bar-chart-o"></i>
-                <span class="title">Visual Charts</span>
-            </a>
-        </li>
+        <@buildLeftMenu view=leftMenuView/>
+            <#--<li class="start active ">-->
+                <#--<a href="index.html">-->
+                    <#--<i class="fa fa-home"></i>-->
+                    <#--<span class="title">站点管理系统</span>-->
+                    <#--<span class="selected"></span>-->
+                <#--</a>-->
+            <#--</li>-->
+        <#--<li class="">-->
+            <#--<a href="javascript:;">-->
+                <#--<i class="fa fa-cogs"></i>-->
+                <#--<span class="title">Layouts</span>-->
+                <#--<span class="arrow "></span>-->
+            <#--</a>-->
+            <#--<ul class="sub-menu">-->
+                <#--<li>-->
+                    <#--<a href="layout_session_timeout.html">-->
+                        <#--<span class="badge badge-roundless badge-warning">new</span>Session Timeout</a>-->
+                    <#--<ul class="sub-menu">-->
+                        <#--<li>-->
+                            <#--<a href="layout_session_timeout.html">-->
+                                <#--<span class="badge badge-roundless badge-warning">new</span>Session Timeout</a>-->
+                        <#--</li>-->
+                    <#--</ul>-->
+                <#--</li>-->
+            <#--</ul>-->
+        <#--</li>-->
+        <#--<li class="tooltips" data-placement="right" data-original-title="Frontend&nbsp;Theme For&nbsp;Metronic&nbsp;Admin">-->
+            <#--<a href="http://keenthemes.com/preview/index.php?theme=metronic_frontend" target="_blank">-->
+                <#--<i class="fa fa-gift"></i>-->
+                <#--<span class="title">Frontend Theme</span>-->
+            <#--</a>-->
+        <#--</li>-->
+        <#--<li class="">-->
+            <#--<a href="javascript:;">-->
+                <#--<i class="fa fa-bookmark-o"></i>-->
+                <#--<span class="title">UI Features</span>-->
+                <#--<span class="arrow "></span>-->
+            <#--</a>-->
+            <#--<ul class="sub-menu">-->
+                <#--<li>-->
+                    <#--<a href="ui_general.html">-->
+                        <#--General</a>-->
+                <#--</li>-->
+                <#--<li>-->
+                    <#--<a href="ui_buttons.html">-->
+                        <#--Buttons &amp; Icons</a>-->
+                <#--</li>-->
+            <#--</ul>-->
+        <#--</li>-->
+        <#--<li class="">-->
+            <#--<a href="javascript:;">-->
+                <#--<i class="fa fa-table"></i>-->
+                <#--<span class="title">Form Stuff</span>-->
+                <#--<span class="arrow "></span>-->
+            <#--</a>-->
+            <#--<ul class="sub-menu">-->
+                <#--<li>-->
+                    <#--<a href="form_controls.html">-->
+                        <#--Form Controls</a>-->
+                <#--</li>-->
+                <#--<li>-->
+                    <#--<a href="form_layouts.html">-->
+                        <#--Form Layouts</a>-->
+                <#--</li>-->
+            <#--</ul>-->
+        <#--</li>-->
+        <#--<li class="">-->
+            <#--<a href="javascript:;">-->
+                <#--<i class="fa fa-sitemap"></i>-->
+                <#--<span class="title">Pages</span>-->
+                <#--<span class="arrow "></span>-->
+            <#--</a>-->
+            <#--<ul class="sub-menu">-->
+                <#--<li>-->
+                    <#--<a href="page_portfolio.html">-->
+                        <#--<i class="fa fa-briefcase"></i>-->
+                        <#--<span class="badge badge-warning badge-roundless">new</span>Portfolio</a>-->
+                <#--</li>-->
+                <#--<li>-->
+                    <#--<a href="page_timeline.html">-->
+                        <#--<i class="fa fa-clock-o"></i>-->
+                        <#--<span class="badge badge-info">4</span>Timeline</a>-->
+                <#--</li>-->
+            <#--</ul>-->
+        <#--</li>-->
+        <#--<li class="">-->
+            <#--<a href="javascript:;">-->
+                <#--<i class="fa fa-user"></i>-->
+                <#--<span class="title">Login Options</span>-->
+                <#--<span class="arrow "></span>-->
+            <#--</a>-->
+            <#--<ul class="sub-menu">-->
+                <#--<li>-->
+                    <#--<a href="login.html">-->
+                        <#--Login Form 1</a>-->
+                <#--</li>-->
+                <#--<li>-->
+                    <#--<a href="login_soft.html">-->
+                        <#--Login Form 2</a>-->
+                <#--</li>-->
+            <#--</ul>-->
+        <#--</li>-->
+        <#--<li class="last ">-->
+            <#--<a href="charts.html">-->
+                <#--<i class="fa fa-bar-chart-o"></i>-->
+                <#--<span class="title">Visual Charts</span>-->
+            <#--</a>-->
+        <#--</li>-->
     </ul>
     <!-- END SIDEBAR MENU -->
 </div>
 </#macro>
-
-<#macro buildTree node>
-    <#if node?? && node.getChildCount() gt 0>
-        <#list node.getChildren() as child>
-            <@buildNode node=child/>
-        </#list>
-    <#else>
-        node[${node.node.code}]
+<#--
+    构建菜单,在生成规律菜单时需要调用buildtree
+-->
+<#macro buildLeftMenu view>
+    <li>
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        <div class="sidebar-toggler hidden-phone"></div>
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+    </li>
+    <li>
+        <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+        <form class="sidebar-search" action="extra_search.html" method="POST">
+            <div class="form-container">
+                <div class="input-box">
+                    <a href="javascript:;" class="remove"></a>
+                    <input type="text" placeholder="Search...">
+                    <input type="button" class="submit" value=" ">
+                </div>
+            </div>
+        </form>
+        <!-- END RESPONSIVE QUICK SEARCH FORM -->
+    </li>
+    <li class="start active ">
+        <a href="index.html">
+            <i class="fa fa-home"></i>
+            <span class="title">站点管理系统</span>
+            <span class="selected"></span>
+        </a>
+    </li>
+    <#if view?? >
+        <#assign root=view[0]/>
+        <@buildTree root 1/>
     </#if>
+</#macro>
+<#--用来保存生成后的html-->
+<#assign menuhtml=""/>
+<#--构建菜单树-->
+<#macro buildTree node depth=1>
+    <#if node?? >
+        <#if (node.getChildCount() > 0)>
+            <#if node.node.code==1>
+                <li class="start">
+                    <a href="${CONTEXT_PATH}${node.node.url}">
+                    <i class="fa fa-home"></i>
+                    <span class="title">${node.node.name}</span>
+                    <span class="selected"></span>
+                    </a>
+            <#else>
+                <ul class="sub-menu">
+            </#if>
+
+                <#list node.getChilds() as child>
+                    <@buildTree child depth+1/>
+                </#list>
+
+            <#if node.node.code==1>
+                </li>
+            <#else>
+                </ul>
+            </#if>
+        <#else >
+            <#if node.node.parentcode ==1>
+                <li class="">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span class="title">[${node.node.name}</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+            <#else>
+                <li>
+                    <a href="${CONTEXT_PATH}${node.node.url}">
+                        <span class="badge badge-roundless badge-warning">new</span>]${node.node.name}</a>
+                </li>
+            </#if>
+        </#if>
+    </#if>
+</#macro>
+
+<#macro buildeSecondTree node>
+    <#if node?? >
+        <#if (node.getChildCount() > 0)>
+            <li>
+                <a>${node.node.name}</a>
+                <ul class="sub-menu">111
+                    <#list node.getChilds() as child>
+                        <@buildTree child depth+1/>
+                    </#list>
+                </ul>
+            </li>
+        <#else >
+            <li>
+                <a href="${CONTEXT_PATH}${node.node.url}">
+                    <span class="badge badge-roundless badge-warning">new</span>]${node.node.name}</a>
+            </li>
+        </#if>
+    </#if>
+</#macro>
+
+<#--构建叶子节点html-->
+<#macro makeNodeHtml node>
+    <li>
+        <a href="${node.url}">
+            <span class="badge badge-roundless badge-warning">new</span>${node.name}</a>
+    </li>
 </#macro>
 
 <#--右侧主要内容-->

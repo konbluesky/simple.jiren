@@ -16,7 +16,6 @@ public class KaihuControl extends AbstractSiteControl {
        public void add(){
            UserIntention ui=getModel(UserIntention.class,"ui");
            ui.save();
-           setAttr("aaa","bbb");
            redirect("/kaihu");
        }
 }
